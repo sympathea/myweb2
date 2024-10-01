@@ -64,8 +64,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-.cl-footer > div:nth-child(2),
-.cl-userButtonPopoverFooter {
-  display: none;
-}
