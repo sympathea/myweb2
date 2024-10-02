@@ -15,8 +15,10 @@ datasource db {
 }
 
 model Message {
-  id        String   @id @default(uuid())
-  message   String
-  createdAt DateTime @default(now())
-  userId    String
+  id            String   @id @default(uuid())
+  message       String
+  createdAt     DateTime @default(now())
+  userId        String
+  userFirstname String
+  userImg       String
 }
