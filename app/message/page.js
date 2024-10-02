@@ -11,8 +11,11 @@ import prisma from "@/lib/db";
 import Image from "next/image";
 import { formatDistanceToNow } from "date-fns";
 
+import { currentUser } from "@clerk/nextjs/server";
+
 export default async function Message() {
   const messages = await getMessages();
+  const user = await currentUser();
 
   return (
     <section className="mx-auto max-w-7xl">
@@ -23,7 +26,7 @@ export default async function Message() {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-10">
-            <Form />
+            {user ? <Form /> : <h2>🌀 Please Log in</h2>}
             <Messages messages={messages} />
           </div>
         </CardContent>
@@ -35,7 +38,6 @@ export default async function Message() {
 
 async function getMessages() {
   const data = await prisma.message.findMany();
-  console.log(data);
 
   return data;
 }
@@ -47,10 +49,10 @@ function Messages({ messages }) {
         <li key={message.id}>
           <div className="flex items-start gap-3 my-1">
             {/* Avatar */}
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center flex-shrink-0 gap-2">
               <Image
                 src={message.userImg}
-                width={40} // Slightly increase the size for better appearance
+                width={40}
                 height={40}
                 alt="user profile image"
                 className="mb-1 rounded-full"

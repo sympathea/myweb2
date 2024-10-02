@@ -3,7 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
-import { SignedIn, SignedOut, SignUpButton, UserButton } from "@clerk/nextjs";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 import { Button } from "./ui/button";
 
 export const navigationItems = [
@@ -53,15 +59,16 @@ export default function Navbar() {
 
       <div className="flex items-center justify-end col-start-4">
         <SignedOut>
-          {/* <SignInButton mode="modal">
+          <SignInButton
+            mode="modal"
+            forceRedirectUrl={pathname}
+            signUpForceRedirectUrl={pathname}
+          >
             <Button>Sign In</Button>
-          </SignInButton> */}
-          <SignUpButton mode="modal" forceRedirectUrl={pathname}>
-            <Button>Sign Up</Button>
-          </SignUpButton>
+          </SignInButton>
         </SignedOut>
         <SignedIn>
-          <UserButton />
+          <UserButton afterSignOutUrl={pathname} />
         </SignedIn>
       </div>
     </nav>
