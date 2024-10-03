@@ -11,6 +11,10 @@ export async function createMessage(formData) {
     throw new Error("Unauthorized");
   }
 
+  // if (!formData.get("message")) {
+  //   return { message: "Please enter something!" };
+  // }
+
   await prisma.message.create({
     data: {
       message: formData.get("message"),

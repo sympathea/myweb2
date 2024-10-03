@@ -12,11 +12,13 @@ import Image from "next/image";
 import { formatDistanceToNow } from "date-fns";
 
 import { currentUser } from "@clerk/nextjs/server";
+import { Suspense } from "react";
+import {
+  GuestBookFormLoading,
+  LoadingMessages,
+} from "@/components/LoadingState";
 
 export default async function Message() {
-  const messages = await getMessages();
-  const user = await currentUser();
-
   return (
     <section className="mx-auto max-w-7xl">
       <Card className="flex flex-col space-y-10 border-none mt-7">
@@ -26,29 +28,45 @@ export default async function Message() {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-10">
-            {user ? <Form /> : <h2>🌀 Please Log in</h2>}
-            <Messages messages={messages} />
+            <Suspense fallback={<GuestBookFormLoading />}>
+              <MessageForm />
+            </Suspense>
+            <Suspense fallback={<LoadingMessages />}>
+              <Messages />
+            </Suspense>
           </div>
         </CardContent>
-        <CardFooter></CardFooter>
+        {/* <CardFooter></CardFooter> */}
       </Card>
     </section>
   );
 }
 
 async function getMessages() {
-  const data = await prisma.message.findMany();
+  const data = await prisma.message.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
   return data;
 }
 
-function Messages({ messages }) {
+async function MessageForm() {
+  const user = await currentUser();
+
+  if (!user) return <h2>🌀 Please Log in</h2>;
+  return <Form />;
+}
+
+async function Messages() {
+  const messages = await getMessages();
+
   return (
     <ul className="flex flex-col space-y-2">
       {messages.map((message) => (
         <li key={message.id}>
           <div className="flex items-start gap-3 my-1">
-            {/* Avatar */}
             <div className="flex flex-col items-center flex-shrink-0 gap-2">
               <Image
                 src={message.userImg}
@@ -60,9 +78,7 @@ function Messages({ messages }) {
               <div className="w-1 h-3 border-l-2 border-gray-300"></div>
             </div>
 
-            {/* Message Body */}
             <div className="flex flex-col">
-              {/* User name and time */}
               <div className="flex items-center gap-2">
                 <p className="font-medium ">{message.userFirstname}</p>
                 <span className="text-xs text-gray-500">
@@ -72,7 +88,6 @@ function Messages({ messages }) {
                 </span>
               </div>
 
-              {/* Message content */}
               <p className="mt-1 text-sm">{message.message}</p>
             </div>
           </div>
