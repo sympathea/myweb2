@@ -18,7 +18,7 @@ import {
   LoadingMessages,
 } from "@/components/LoadingState";
 
-export default async function Message() {
+export default async function MessagePage() {
   return (
     <section className="mx-auto max-w-7xl">
       <Card className="flex flex-col space-y-10 border-none mt-7">
@@ -36,7 +36,6 @@ export default async function Message() {
             </Suspense>
           </div>
         </CardContent>
-        {/* <CardFooter></CardFooter> */}
       </Card>
     </section>
   );

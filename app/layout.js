@@ -1,7 +1,7 @@
-import Navbar from "@/components/Navbar";
 import "./global.css";
 import { Roboto_Mono } from "next/font/google";
 import ClerkProviderWrapper from "@/components/ClerkProviderWrapper";
+import Header from "@/components/Header";
 
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
     <ClerkProviderWrapper>
       <html lang="en">
         <body className={roboto_mono.className}>
-          <Navbar />
-          {children}
+          <Header />
+          <main>{children}</main>
         </body>
       </html>
     </ClerkProviderWrapper>

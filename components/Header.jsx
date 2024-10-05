@@ -3,13 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 
 export const navigationItems = [
@@ -18,8 +12,8 @@ export const navigationItems = [
     href: "/",
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: "Project",
+    href: "/project",
   },
   {
     name: "Message",
@@ -27,11 +21,11 @@ export const navigationItems = [
   },
 ];
 
-export default function Navbar() {
+export default function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="grid grid-flow-col grid-cols-4 px-4 py-5 mx-auto max-w-7xl md:px-8">
+    <header className="grid grid-flow-col grid-cols-4 px-4 py-5 mx-auto max-w-7xl md:px-8">
       <div className="col-span-1 ">
         <Link href="/">
           <h1 className="hidden text-2xl font-semibold sm:block">Zephyr Lin</h1>
@@ -71,6 +65,6 @@ export default function Navbar() {
           <UserButton afterSignOutUrl={pathname} />
         </SignedIn>
       </div>
-    </nav>
+    </header>
   );
 }
