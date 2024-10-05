@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
+import { UserPlus } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const navigationItems = [
   {
@@ -35,21 +37,21 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="items-center justify-center hidden col-span-2 space-x-10 sm:flex">
+      <ul className="items-center justify-center hidden col-span-2 space-x-10 sm:flex">
         {navigationItems.map((item) => {
           return (
-            <Link
-              href={item.href}
+            <motion.li
+              whileHover={{ letterSpacing: "1px" }}
               key={item.name}
               className={`p-2 ${
                 pathname == item.href ? "rounded-xl font-bold bg-zinc-50" : ""
               }`}
             >
-              {item.name}
-            </Link>
+              <Link href={item.href}>{item.name}</Link>
+            </motion.li>
           );
         })}
-      </div>
+      </ul>
 
       <div className="flex items-center justify-end col-start-4">
         <SignedOut>
@@ -58,7 +60,9 @@ export default function Header() {
             forceRedirectUrl={pathname}
             signUpForceRedirectUrl={pathname}
           >
-            <Button>Sign In</Button>
+            <Button variant="ghost" size="icon">
+              <UserPlus />
+            </Button>
           </SignInButton>
         </SignedOut>
         <SignedIn>

@@ -1,6 +1,8 @@
+import Projects from "@/components/Projects";
 import { client } from "@/lib/sanity";
 import { revalidatePath } from "next/cache";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function ProjectPage() {
   const projects = await getData();
@@ -29,6 +31,7 @@ export default async function ProjectPage() {
           </div>
         ))}
       </section>
+      {/* <Projects projects={projects} /> */}
     </div>
   );
 }
@@ -45,8 +48,6 @@ async function getData() {
     }`;
 
   const data = await client.fetch(query, { cache: "no-cache" });
-
-  console.log(data);
 
   return data;
 }
