@@ -44,7 +44,9 @@ export default function Header() {
               whileHover={{ letterSpacing: "1px" }}
               key={item.name}
               className={`p-2 ${
-                pathname == item.href ? "rounded-xl font-bold bg-zinc-50" : ""
+                pathname == item.href
+                  ? " font-black text-sky-600"
+                  : "font-semibold"
               }`}
             >
               <Link href={item.href}>{item.name}</Link>
