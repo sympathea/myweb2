@@ -2,20 +2,9 @@ import Projects from "@/components/Projects";
 import { client } from "@/lib/sanity";
 import { revalidatePath } from "next/cache";
 
-import ProjectDescription from "@/components/ProjectDescription";
+import Description from "@/components/Description";
 
 export default async function ProjectPage() {
-  const projects = await getData();
-
-  return (
-    <div className="px-4 mx-auto mt-16 max-w-7xl md:px-8">
-      <ProjectDescription />
-      <Projects projects={projects} />
-    </div>
-  );
-}
-
-async function getData() {
   revalidatePath("/project");
   const query = `*[_type == 'project'] | order(_createdAt desc) {
         title,
@@ -26,7 +15,15 @@ async function getData() {
           "imageUrl": image.asset->url
     }`;
 
-  const data = await client.fetch(query, { cache: "no-cache" });
+  const projects = await client.fetch(query, { cache: "no-cache" });
 
-  return data;
+  return (
+    <div className="flex flex-col gap-20 px-4 mx-auto mt-16 max-w-7xl md:px-8">
+      <Description
+        page="Project"
+        description="Showcasing my exploration and experimentation in the tech field. Progressing...."
+      />
+      <Projects projects={projects} />
+    </div>
+  );
 }

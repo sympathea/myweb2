@@ -1,15 +1,12 @@
-"use client";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
 
-export default function Projects({ projects }) {
+export default function Blogs({ blogs }) {
   return (
     <section>
       <ul className="grid w-full grid-cols-1 gap-10 mx-auto sm:grid-cols-2 md:grid-cols-3">
-        {projects.map((project) => (
+        {blogs.map((project) => (
           <motion.div
             key={project._id}
             initial={{ y: 30 }}
@@ -39,10 +36,6 @@ export default function Projects({ projects }) {
 
             <Link href={project.link} target="_blank">
               <span className="absolute -inset-x-0 -inset-y-0 sm:rounded-2xl" />
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground ">
-                <p>{new URL(project.link).host}</p>
-                <ExternalLink className="size-4" />
-              </div>
             </Link>
           </motion.div>
         ))}

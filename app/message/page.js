@@ -12,8 +12,8 @@ import MessageDescription from "@/components/MessageDescription";
 
 export default async function MessagePage() {
   return (
-    <section className="mx-auto max-w-7xl">
-      <Card className="flex flex-col space-y-10 border-none mt-7">
+    <div className="mx-auto max-w-7xl mt-7">
+      <Card className="border-none ">
         <CardHeader>
           <MessageDescription />
         </CardHeader>
@@ -28,7 +28,7 @@ export default async function MessagePage() {
           </div>
         </CardContent>
       </Card>
-    </section>
+    </div>
   );
 }
 
