@@ -2,17 +2,14 @@ import Projects from "@/components/Projects";
 import { client } from "@/lib/sanity";
 import { revalidatePath } from "next/cache";
 
+import ProjectDescription from "@/components/ProjectDescription";
+
 export default async function ProjectPage() {
   const projects = await getData();
 
   return (
     <div className="px-4 mx-auto mt-16 max-w-7xl md:px-8">
-      <section className="w-full">
-        <h1 className="mb-10 text-4xl font-semibold">Project</h1>
-        <p className="w-2/3 font-normal">
-          Showcasing my exploration and experimentation in the tech field.
-        </p>
-      </section>
+      <ProjectDescription />
       <Projects projects={projects} />
     </div>
   );

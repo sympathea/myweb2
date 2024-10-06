@@ -13,6 +13,8 @@ export default function Projects({ projects }) {
         {projects.map((project) => (
           <motion.div
             key={project._id}
+            initial={{ y: 30 }}
+            animate={{ y: 0 }}
             whileHover={{
               scale: 1.02,
             }}

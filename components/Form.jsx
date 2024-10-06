@@ -6,7 +6,6 @@ import { useRef } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useFormStatus } from "react-dom";
-
 export default function Form() {
   const formRef = useRef(null);
 
