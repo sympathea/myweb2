@@ -14,6 +14,10 @@ export const navigationItems = [
     href: "/",
   },
   {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
     name: "Project",
     href: "/project",
   },
@@ -30,23 +34,23 @@ export default function Header() {
     <header className="grid grid-flow-col grid-cols-4 px-4 py-5 mx-auto max-w-7xl md:px-8">
       <div className="col-span-1 ">
         <Link href="/">
-          <h1 className="hidden text-2xl font-semibold sm:block">Zephyr Lin</h1>
+          <div className="hidden w-10 h-10 p-6 text-2xl font-semibold border-2 border-dashed rounded-full border-slate-700 sm:flex sm:justify-center sm:items-center">
+            ZL
+          </div>
         </Link>
         <div className="sm:hidden">
           <MobileMenu />
         </div>
       </div>
 
-      <ul className="items-center justify-center hidden col-span-2 space-x-10 sm:flex">
+      <ul className="items-center justify-center hidden col-span-2 gap-5 sm:flex">
         {navigationItems.map((item) => {
           return (
             <motion.li
               whileHover={{ letterSpacing: "1px" }}
               key={item.name}
               className={`p-2 ${
-                pathname == item.href
-                  ? " font-black text-sky-600"
-                  : "font-semibold"
+                pathname == item.href ? "font-extrabold" : "font-normal"
               }`}
             >
               <Link href={item.href}>{item.name}</Link>
