@@ -29,10 +29,11 @@ export const navigationItems = [
 
 export default function Header() {
   const pathname = usePathname();
+  const page = pathname.split("/").slice(0, 2).join("/");
 
   return (
     <header className="grid grid-flow-col grid-cols-4 px-4 py-5 mx-auto max-w-7xl md:px-8">
-      <div className="col-span-1 ">
+      <div className="flex items-center justify-start col-span-1">
         <Link href="/">
           <div className="hidden w-10 h-10 p-6 text-2xl font-semibold border-2 border-dashed rounded-full border-slate-700 sm:flex sm:justify-center sm:items-center">
             ZL
@@ -50,7 +51,7 @@ export default function Header() {
               whileHover={{ letterSpacing: "1px" }}
               key={item.name}
               className={`p-2 ${
-                pathname == item.href ? "font-extrabold" : "font-normal"
+                page == item.href ? "font-extrabold" : "font-normal"
               }`}
             >
               <Link href={item.href}>{item.name}</Link>

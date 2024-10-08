@@ -12,22 +12,16 @@ import MessageDescription from "@/components/MessageDescription";
 
 export default async function MessagePage() {
   return (
-    <div className="mx-auto max-w-7xl mt-7">
-      <Card className="border-none ">
-        <CardHeader>
-          <MessageDescription />
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col gap-10">
-            <Suspense fallback={<GuestBookFormLoading />}>
-              <MessageForm />
-            </Suspense>
-            <Suspense fallback={<LoadingMessages />}>
-              <Messages />
-            </Suspense>
-          </div>
-        </CardContent>
-      </Card>
+    <div className="flex flex-col gap-20 px-4 mx-auto mt-16 max-w-7xl md:px-8">
+      <MessageDescription />
+      <div className="flex flex-col gap-10">
+        <Suspense fallback={<GuestBookFormLoading />}>
+          <MessageForm />
+        </Suspense>
+        <Suspense fallback={<LoadingMessages />}>
+          <Messages />
+        </Suspense>
+      </div>
     </div>
   );
 }

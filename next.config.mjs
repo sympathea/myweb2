@@ -6,6 +6,7 @@ const nextConfig = {
       { hostname: "cdn.sanity.io" },
     ],
   },
+  pageExtensions: ["js", "jsx", "mdx"],
 };
 
 export default nextConfig;
