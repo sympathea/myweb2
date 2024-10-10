@@ -2,14 +2,13 @@
 
 import { motion } from "framer-motion";
 
-export default function MotionWrapper({
+export default function MotionDivWrapper({
   children,
   key,
   initial,
   animate,
   whileHover,
   transition,
-  className,
 }) {
   return (
     <motion.div
@@ -18,7 +17,6 @@ export default function MotionWrapper({
       animate={animate}
       whileHover={whileHover}
       transition={transition}
-      className={className}
     >
       {children}
     </motion.div>
