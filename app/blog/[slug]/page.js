@@ -1,38 +1,36 @@
-import path from "path";
-import fs from "fs";
-import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeftIcon, Undo2 } from "lucide-react";
+import { Undo2 } from "lucide-react";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { getBlogBySlug } from "@/lib/blog";
 
-export default async function Post({ params }) {
+export default async function Blog({ params }) {
   const { slug } = params;
-  const post = await getPostBySlug(slug);
+  const blog = await getBlogBySlug(slug);
 
-  if (!post) {
+  if (!blog) {
     notFound();
   }
 
-  const { metadata, content } = post;
-  const { title, summary, image, publishedAt } = metadata;
+  const { metadata, content } = blog;
+  const { title, summary, image, author, publishedAt, tag } = metadata;
 
   return (
     <section className="flex px-4 mx-auto max-w-7xl md:px-8">
       <aside className="relative">
         <Link
           href="/blog"
-          className="sticky left-0 inline-flex items-center p-2 mt-4 font-light transition-colors rounded-full shadow-lg top-10 text-muted-foreground hover:text-foreground"
+          className="sticky flex items-center p-2 pt-10 mt-4 font-light transition-colors rounded-full shadow-lg top-10 text-muted-foreground hover:text-foreground"
         >
-          <Undo2 className="w-8 h-8" />
+          <Undo2 className="w-5 h-5" />
         </Link>
       </aside>
 
-      <article className="max-w-4xl mx-auto">
+      <article className="max-w-4xl mx-auto mt-16">
         <header>
           {image && (
-            <div className="relative w-full mb-6 overflow-hidden rounded-lg h-96">
+            <div className="relative w-full mb-10 overflow-hidden rounded-lg h-96">
               <Image
                 src={image}
                 alt={title || ""}
@@ -42,13 +40,18 @@ export default async function Post({ params }) {
             </div>
           )}
 
-          <p className="mb-6 text-sm text-muted-foreground ">
-            {publishedAt ?? ""}
+          <p className="mb-2 text-sm text-muted-foreground ">
+            {publishedAt ?? ""} | {tag}
           </p>
 
-          <h1 className="mb-6 text-4xl font-bold">{title}</h1>
-          <p className="text-muted-foreground">{summary}</p>
+          <h1 className="mb-2 text-4xl font-bold">{title}</h1>
+
+          <p className="mb-6 text-muted-foreground">{author}</p>
+
+          <p className="">{summary}</p>
         </header>
+
+        <hr className="mt-10 border border-gray-400" />
 
         <main className="mt-16 prose dark:prose-invert max-w-none">
           <MDXRemote source={content} />
@@ -56,14 +59,4 @@ export default async function Post({ params }) {
       </article>
     </section>
   );
-}
-
-async function getPostBySlug(slug) {
-  const rootDirectory = path.join(process.cwd(), "content", "blog");
-  const filePath = path.join(rootDirectory, `${slug}.mdx`);
-  const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" });
-
-  const { data, content } = matter(fileContent);
-
-  return { metadata: { ...data, slug }, content };
 }
