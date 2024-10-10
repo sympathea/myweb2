@@ -1,16 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import MotionWrapper from "./MotionWrapper";
 
 export default function Projects({ projects }) {
   return (
     <section>
       <ul className="grid w-full grid-cols-1 gap-10 mx-auto sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
-          <motion.div
+          <MotionWrapper
             key={project._id}
             initial={{ y: 30 }}
             animate={{ y: 0 }}
@@ -44,7 +42,7 @@ export default function Projects({ projects }) {
                 <ExternalLink className="size-4" />
               </div>
             </Link>
-          </motion.div>
+          </MotionWrapper>
         ))}
       </ul>
     </section>
