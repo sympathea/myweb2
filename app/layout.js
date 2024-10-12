@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProviderWrapper>
       <html lang="en">
-        <body className={roboto_mono.className}>
+        <body className={`${roboto_mono.className}`}>
           <Header />
           <main>{children}</main>
         </body>

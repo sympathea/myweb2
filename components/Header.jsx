@@ -35,7 +35,7 @@ export default function Header() {
     <header className="grid grid-flow-col grid-cols-4 px-4 py-5 mx-auto max-w-7xl md:px-8">
       <div className="flex items-center justify-start col-span-1">
         <Link href="/">
-          <div className="hidden w-10 h-10 p-6 text-2xl font-semibold border-2 border-dashed rounded-full border-slate-700 sm:flex sm:justify-center sm:items-center">
+          <div className="hidden w-10 h-10 p-6 text-2xl font-semibold rounded-full text-customGray sm:flex sm:justify-center sm:items-center">
             ZL
           </div>
         </Link>
@@ -44,21 +44,23 @@ export default function Header() {
         </div>
       </div>
 
-      <ul className="items-center justify-center hidden col-span-2 gap-5 sm:flex">
-        {navigationItems.map((item) => {
-          return (
-            <motion.li
-              whileHover={{ letterSpacing: "1px" }}
-              key={item.name}
-              className={`p-2 ${
-                page == item.href ? "font-extrabold" : "font-normal"
-              }`}
-            >
-              <Link href={item.href}>{item.name}</Link>
-            </motion.li>
-          );
-        })}
-      </ul>
+      <div className="justify-center hidden col-span-2 sm:flex">
+        <ul className="items-center justify-center hidden gap-5 px-3 border rounded-full bg-opacity-80 border-customBlack bg-customGray sm:flex">
+          {navigationItems.map((item) => {
+            return (
+              <motion.li
+                whileHover={{ letterSpacing: "1px" }}
+                key={item.name}
+                className={`p-2 text-customBlack ${
+                  page == item.href ? "font-extrabold" : "font-bold  "
+                }`}
+              >
+                <Link href={item.href}>{item.name}</Link>
+              </motion.li>
+            );
+          })}
+        </ul>
+      </div>
 
       <div className="flex items-center justify-end col-start-4">
         <SignedOut>
