@@ -17,11 +17,11 @@ export default async function Blog({ params }) {
   const { title, summary, image, author, publishedAt, tag } = metadata;
 
   return (
-    <section className="flex px-4 mx-auto max-w-7xl md:px-8">
-      <aside className="relative">
+    <section className="flex gap-6 px-4 mx-auto max-w-7xl md:px-8">
+      <aside className="relative pt-14">
         <Link
           href="/blog"
-          className="sticky flex items-center p-2 pt-10 mt-4 font-light transition-colors rounded-full shadow-lg top-10 text-muted-foreground hover:text-foreground"
+          className="sticky flex items-center p-2 font-light transition-colors rounded-full shadow-lg top-10 text-muted-foreground hover:text-foreground"
         >
           <Undo2 className="w-5 h-5" />
         </Link>
