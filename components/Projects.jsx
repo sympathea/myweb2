@@ -18,7 +18,7 @@ export default function Projects({ projects }) {
             transition={{ type: "spring", stiffness: 200 }}
           >
             <Link href={project.link} target="_blank">
-              <div className="relative flex flex-col items-start justify-center gap-6 p-5 shadow-sm rounded-2xl hover:bg-opacity-80 hover:bg-gray-100 hover:border hover:border-dashed hover:border-slate-400">
+              <div className="relative flex flex-col items-start justify-center gap-6 p-5 shadow-sm rounded-2xl hover:bg-opacity-80 ">
                 <div className="relative flex items-center justify-center w-12 h-12 border rounded-full ">
                   <Image
                     src={project.imageUrl}
@@ -30,13 +30,11 @@ export default function Projects({ projects }) {
                 </div>
 
                 <div className="">
-                  <h2 className="mb-4 font-bold">{project.title}</h2>
-                  <p className="text-sm text-muted-foreground">
-                    {project.description}
-                  </p>
+                  <h2 className="mb-4 font-semibold">{project.title}</h2>
+                  <p className="text-sm font-light">{project.description}</p>
                 </div>
 
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground ">
+                <div className="flex items-center justify-center gap-2 text-sm">
                   <p>{new URL(project.link).host}</p>
                   <ExternalLink className="size-4" />
                 </div>

@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-  :root {
-    /* --background: 0 0% 100%; */
-    /* --foreground: 222.2 84% 4.9%; */
-    --background: 180 8% 7%; /* Updated background to #0c1313 */
-    --foreground: 0 0% 84%; /* Updated text color to #d6d6d6 */
+  /* :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
@@ -30,12 +28,10 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-  }
-  .dark {
-    /* --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%; */
-    --background: 180 8% 7%; /* Updated background to #0c1313 */
-    --foreground: 0 0% 84%; /* Updated text color to #d6d6d6 */
+  } */
+  :root {
+    --background: 188.6 22.6% 6.1%;
+    --foreground: 180 1.7% 76.5%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;

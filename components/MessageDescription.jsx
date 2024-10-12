@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function MessageDescription() {
   return (
     <motion.div initial={{ y: 30 }} animate={{ y: 0 }}>
-      <CardTitle className="text-4xl">Message Board</CardTitle>
-      <CardDescription>Leave me A Message!</CardDescription>
+      <h1 className="text-4xl font-semibold">Message Board</h1>
+      <p className="font-light ">Leave me A Message!</p>
     </motion.div>
   );
 }

@@ -18,20 +18,20 @@ export default async function Messages() {
                 alt="user profile image"
                 className="mb-1 rounded-full"
               />
-              <div className="w-1 h-3 border-l-2 border-gray-300"></div>
+              <div className="w-1 h-3 border-l-2 border-foreground"></div>
             </div>
 
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <p className="font-medium ">{message.userFirstname}</p>
-                <span className="text-xs text-gray-500">
+                <p className="">{message.userFirstname}</p>
+                <span className="text-xs ">
                   {formatDistanceToNow(new Date(message.createdAt), {
                     addSuffix: true,
                   })}
                 </span>
               </div>
 
-              <p className="mt-1 text-sm">{message.message}</p>
+              <p className="mt-1 text-xs font-light">{message.message}</p>
             </div>
           </div>
         </li>
