@@ -6,9 +6,10 @@ export function DescriptionAnimation() {
   return (
     <TypeAnimation
       sequence={[
-        "A Web <Developer /> .",
-        1000,
-        "",
+        "a <developer /> ",
+        2000,
+        "a learner .",
+        2000,
         () => {
           console.log("Sequence completed");
         },
@@ -22,7 +23,7 @@ export function DescriptionAnimation() {
         display: "inline-block",
         width: "600px",
       }}
-      speed={10}
+      speed={5}
     />
   );
 }

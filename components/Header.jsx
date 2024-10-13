@@ -35,10 +35,11 @@ export default function Header() {
     <header className="grid grid-flow-col grid-cols-4 px-4 py-8 mx-auto max-w-7xl md:px-8">
       <div className="flex items-center justify-start col-span-1">
         <Link href="/">
-          <div className="hidden text-2xl font-semibold rounded-full sm:flex sm:justify-center sm:items-center">
+          <div className="hidden text-2xl font-semibold rounded-full opacity-50 sm:flex sm:justify-center sm:items-center hover:opacity-90 ">
             ZL
           </div>
         </Link>
+
         <div className="sm:hidden">
           <MobileMenu />
         </div>
@@ -62,15 +63,16 @@ export default function Header() {
                     ></motion.div>
                   </>
                 )}
-
-                <motion.div
-                  whileHover={{
-                    backgroundColor: "#f2f2f20d",
-                  }}
-                  className={`px-4 py-3 rounded-full ${item.name != "Home" && item.name != "Blog" ? "tracking-tight" : "tracking-widest"} font-bold text-sm`}
-                >
-                  <Link href={item.href}>{item.name}</Link>
-                </motion.div>
+                <Link href={item.href}>
+                  <motion.div
+                    whileHover={{
+                      backgroundColor: "#f2f2f20d",
+                    }}
+                    className={`px-4 py-3 rounded-full ${item.name != "Home" && item.name != "Blog" ? "tracking-tight" : "tracking-widest"} font-bold text-sm`}
+                  >
+                    {item.name}
+                  </motion.div>
+                </Link>
               </motion.li>
             );
           })}
@@ -84,7 +86,11 @@ export default function Header() {
             forceRedirectUrl={pathname}
             signUpForceRedirectUrl={pathname}
           >
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-xl opacity-70 hover:opacity-100"
+            >
               <UserPlus />
             </Button>
           </SignInButton>

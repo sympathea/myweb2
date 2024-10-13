@@ -53,7 +53,7 @@ export default async function Blog({ params }) {
 
         <hr className="mt-10 border border-gray-400" />
 
-        <main className="mt-16 prose dark:prose-invert max-w-none">
+        <main className="mt-16 prose text-white max-w-none">
           <MDXRemote source={content} />
         </main>
       </article>

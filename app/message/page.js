@@ -29,6 +29,6 @@ export default async function MessagePage() {
 async function MessageForm() {
   const user = await currentUser();
 
-  if (!user) return <h2>🌀 Please Log in</h2>;
+  if (!user) return <h2>✌️ Please Log in</h2>;
   return <Form />;
 }
