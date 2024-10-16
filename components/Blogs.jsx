@@ -9,12 +9,12 @@ export default function Blogs({ blogs }) {
         {blogs.map((blog) => (
           <MotionDivWrapper
             key={blog._id}
-            initial={{ y: 30 }}
-            animate={{ y: 0 }}
-            whileHover={{
-              scale: 1.02,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              opacity: { duration: 0.5 },
+              y: { duration: 0.2 },
             }}
-            transition={{ type: "spring", stiffness: 200 }}
           >
             <Link href={`/blog/${blog.slug}`}>
               <div className="relative shadow-sm opacity-50 rounded-2xl hover:opacity-90">

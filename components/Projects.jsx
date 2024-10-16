@@ -10,12 +10,12 @@ export default function Projects({ projects }) {
         {projects.map((project) => (
           <MotionDivWrapper
             key={project._id}
-            initial={{ y: 30 }}
-            animate={{ y: 0 }}
-            whileHover={{
-              scale: 1.02,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              opacity: { duration: 0.5 },
+              y: { duration: 0.2 },
             }}
-            transition={{ type: "spring", stiffness: 200 }}
           >
             <Link href={project.link} target="_blank">
               <div className="relative flex flex-col items-start justify-center gap-6 p-5 shadow-sm rounded-2xl hover:bg-opacity-80 ">
