@@ -6,10 +6,10 @@ export function DescriptionAnimation() {
   return (
     <TypeAnimation
       sequence={[
+        1000,
         "a <developer /> ",
         2000,
         "a learner .",
-        2000,
         () => {
           console.log("Sequence completed");
         },

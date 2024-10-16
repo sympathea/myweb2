@@ -9,6 +9,7 @@ export default function MotionDivWrapper({
   animate,
   whileHover,
   transition,
+  className,
 }) {
   return (
     <motion.div
@@ -17,6 +18,7 @@ export default function MotionDivWrapper({
       animate={animate}
       whileHover={whileHover}
       transition={transition}
+      className={className}
     >
       {children}
     </motion.div>

@@ -1,16 +1,19 @@
-import {
-  DescriptionAnimation,
-  NameAnimation,
-} from "@/components/HeroAnimation";
+import { DescriptionAnimation } from "@/components/HeroAnimation";
+import MotionDivWrapper from "@/components/MotionDivWrapper";
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto mt-40 max-w-7xl">
+    <MotionDivWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      className="flex flex-col items-center justify-center mx-auto mt-40 max-w-7xl"
+    >
       <div className="text-4xl font-semibold">
         <span className="inline-block mb-5">i'm zephyr ✌️</span>
         <br />
         <DescriptionAnimation />
       </div>
-    </div>
+    </MotionDivWrapper>
   );
 }

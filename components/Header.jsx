@@ -54,7 +54,7 @@ export default function Header() {
                 {isSelected && (
                   <>
                     <motion.div
-                      className="absolute left-1/4 w-9 mx-auto border-t-2 shadow-[0_2px_25px_2px_#fff]"
+                      className="absolute left-1/4 w-1/2 mx-auto border-t-[3px] rounded-full shadow-[0_20px_100px_5px_#fff]"
                       layoutId="selected"
                     ></motion.div>
                     <motion.div
