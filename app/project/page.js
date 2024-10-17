@@ -18,7 +18,7 @@ export default async function ProjectPage() {
   const projects = await client.fetch(query, { cache: "no-cache" });
 
   return (
-    <div className="flex flex-col gap-20 px-4 mx-auto mt-16 max-w-7xl md:px-8">
+    <div className="flex flex-col gap-20 mt-16 ">
       <Description
         page="Project"
         description="Showcasing my exploration and experimentation in the tech field. Progressing...."

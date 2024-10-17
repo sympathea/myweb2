@@ -8,7 +8,7 @@ export function DescriptionAnimation() {
       sequence={[
         1000,
         "a <developer /> ",
-        2000,
+        1000,
         "a learner .",
         () => {
           console.log("Sequence completed");
@@ -23,7 +23,7 @@ export function DescriptionAnimation() {
         display: "inline-block",
         width: "600px",
       }}
-      speed={5}
+      speed={10}
     />
   );
 }

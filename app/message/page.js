@@ -12,7 +12,7 @@ import MessageDescription from "@/components/MessageDescription";
 
 export default async function MessagePage() {
   return (
-    <div className="flex flex-col gap-20 px-4 mx-auto mt-16 max-w-7xl md:px-8">
+    <div className="flex flex-col gap-20 mt-16 ">
       <MessageDescription />
       <div className="flex flex-col gap-10">
         <Suspense fallback={<GuestBookFormLoading />}>

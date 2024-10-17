@@ -32,7 +32,7 @@ export default function Header() {
   const page = pathname.split("/").slice(0, 2).join("/");
 
   return (
-    <header className="grid grid-flow-col grid-cols-4 px-4 py-8 mx-auto max-w-7xl md:px-8">
+    <header className="grid w-full grid-flow-col grid-cols-4">
       <div className="flex items-center justify-start col-span-1">
         <Link href="/">
           <div className="hidden text-2xl font-semibold rounded-full opacity-50 sm:flex sm:justify-center sm:items-center hover:opacity-90 ">

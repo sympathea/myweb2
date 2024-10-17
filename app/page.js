@@ -7,7 +7,7 @@ export default function Page() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
-      className="flex flex-col items-center justify-center mx-auto mt-40 max-w-7xl"
+      className="flex flex-col mt-40"
     >
       <div className="text-4xl font-semibold">
         <span className="inline-block mb-5">i'm zephyr ✌️</span>
