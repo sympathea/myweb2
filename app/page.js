@@ -7,12 +7,18 @@ export default function Page() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
-      className="flex flex-col mt-40"
+      className="flex flex-col w-2/3 gap-10 mt-40"
     >
       <div className="text-4xl font-semibold">
         <span className="inline-block mb-5">i'm zephyr ✌️</span>
         <br />
         <DescriptionAnimation />
+      </div>
+
+      <div className="text-muted-foreground">
+        I am a graduate student at University of Minnesota Twin Cities majoring
+        in Computer Science. I am passionate about crafting application that
+        merge aesthetics with purpose
       </div>
     </MotionDivWrapper>
   );
