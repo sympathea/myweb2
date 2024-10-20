@@ -6,7 +6,7 @@ import MotionDivWrapper from "./MotionDivWrapper";
 export default function Projects({ projects }) {
   return (
     <section>
-      <ul className="grid w-full grid-cols-1 gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid w-full grid-cols-1 gap-5 mx-auto sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <MotionDivWrapper
             key={project._id}
@@ -18,7 +18,7 @@ export default function Projects({ projects }) {
             }}
           >
             <Link href={project.link} target="_blank">
-              <div className="relative flex flex-col items-start justify-center gap-6 p-5 shadow-sm rounded-2xl hover:bg-opacity-80 ">
+              <div className="relative flex flex-col items-start justify-center gap-6 p-5 border-dashed border-[0.8px] border-transparent rounded-2xl hover:border-muted-foreground hover:bg-muted">
                 <div className="relative flex items-center justify-center w-12 h-12 border rounded-full ">
                   <Image
                     src={project.imageUrl}
@@ -29,9 +29,11 @@ export default function Projects({ projects }) {
                   />
                 </div>
 
-                <div className="">
+                <div>
                   <h2 className="mb-4 font-semibold">{project.title}</h2>
-                  <p className="text-sm font-light">{project.description}</p>
+                  <p className="text-sm font-extralight text-muted-foreground">
+                    {project.description}
+                  </p>
                 </div>
 
                 <div className="flex items-center justify-center gap-2 text-sm">

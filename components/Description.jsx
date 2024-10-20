@@ -10,7 +10,9 @@ export default function Description({ page, description }) {
       transition={{ duration: 1 }}
     >
       <h1 className="mb-10 text-4xl font-semibold">{page}</h1>
-      <p className={`${page === "Blog" ? "w-1/2" : "w-2/3"} font-normal`}>
+      <p
+        className={`${page === "Blog" ? "w-1/2" : "w-2/3"} font-normal text-muted-foreground`}
+      >
         {description}
       </p>
     </motion.section>
