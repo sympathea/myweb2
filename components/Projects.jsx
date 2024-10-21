@@ -31,7 +31,7 @@ export default function Projects({ projects }) {
 
                 <div>
                   <h2 className="mb-4 font-semibold">{project.title}</h2>
-                  <p className="text-sm font-extralight text-muted-foreground">
+                  <p className="text-sm font-light text-muted-foreground">
                     {project.description}
                   </p>
                 </div>
