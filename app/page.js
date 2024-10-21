@@ -10,7 +10,7 @@ export default function Page() {
       className="flex flex-col w-2/3 gap-10 mt-40"
     >
       <div className="text-4xl font-semibold">
-        <span className="inline-block mb-5">i'm zephyr ✌️</span>
+        <span className="inline-block mb-5">i&apos;m zephyr ✌️</span>
         <br />
         <DescriptionAnimation />
       </div>
