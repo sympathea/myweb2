@@ -7,6 +7,9 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { UserPlus } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+import avatarImg from "@/public/images/avatar/avatar.JPG";
 
 export const navigationItems = [
   {
@@ -38,6 +41,10 @@ export default function Header() {
           <div className="hidden text-2xl font-semibold rounded-full opacity-50 sm:flex sm:justify-center sm:items-center hover:opacity-90 ">
             ZL
           </div>
+
+          {/* <div className="relative hidden w-12 h-12 rounded-full sm:flex ">
+            <Image src={avatarImg} alt="Avatar image" className="" />
+          </div> */}
         </Link>
 
         <div className="sm:hidden">

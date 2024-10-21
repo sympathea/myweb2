@@ -16,9 +16,9 @@ export default function Page() {
       </div>
 
       <div className="text-muted-foreground">
-        I am a graduate student at University of Minnesota Twin Cities majoring
-        in Computer Science. I am passionate about crafting application that
-        merge aesthetics with purpose
+        I am an undergraduate student at University of Minnesota Twin Cities
+        majoring in Computer Science. I am passionate about crafting application
+        that merge aesthetics with purpose
       </div>
     </MotionDivWrapper>
   );

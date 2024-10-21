@@ -6,7 +6,7 @@ import Description from "@/components/Description";
 
 export default async function ProjectPage() {
   revalidatePath("/project");
-  const query = `*[_type == 'project'] | order(_createdAt desc) {
+  const query = `*[_type == 'project'] | order(_updatedAt desc) {
         title,
           _id,
           link,
