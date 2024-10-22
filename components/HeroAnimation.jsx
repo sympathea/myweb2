@@ -7,9 +7,9 @@ export function DescriptionAnimation() {
     <TypeAnimation
       sequence={[
         1000,
-        "a <developer /> ",
+        "<developer /> ",
         1000,
-        "a learner .",
+        "learner .",
         () => {
           console.log("Sequence completed");
         },
@@ -19,9 +19,9 @@ export function DescriptionAnimation() {
       repeat={Infinity}
       style={{
         whiteSpace: "pre-line",
-        fontSize: "2.25rem",
+        fontSize: "2.2rem",
         display: "inline-block",
-        width: "600px",
+        width: "full",
       }}
       speed={10}
     />

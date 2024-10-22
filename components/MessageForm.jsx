@@ -18,7 +18,7 @@ export default function MessageForm({ children }) {
         setText("");
       }}
     >
-      <div className="flex w-full gap-2 rounded-md shadow-[0_0px_1.2px_rgb(140,140,140)] p-3 min-h-20 md:w-2/3">
+      <div className="flex w-full gap-2 rounded-md shadow-[0_0px_1.2px_rgb(140,140,140)] p-3 min-h-20 lg:w-2/3">
         {/* User image */}
         <div className="w-12 h-12 shrink-0">{children}</div>
 

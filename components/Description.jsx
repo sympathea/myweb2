@@ -11,7 +11,7 @@ export default function Description({ page, description }) {
     >
       <h1 className="mb-10 text-4xl font-semibold">{page}</h1>
       <p
-        className={`${page === "Blog" ? "w-1/2" : "w-2/3"} font-normal text-muted-foreground`}
+        className={`${page === "Blog" ? "md:w-1/2" : "sm:w-2/3"} font-normal text-muted-foreground w-full`}
       >
         {description}
       </p>

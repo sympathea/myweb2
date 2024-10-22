@@ -5,7 +5,7 @@ import MotionDivWrapper from "./MotionDivWrapper";
 export default function Blogs({ blogs }) {
   return (
     <section>
-      <ul className="grid w-full grid-cols-1 gap-10 mx-auto md:grid-cols-2">
+      <ul className="grid w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-2">
         {blogs.map((blog) => (
           <MotionDivWrapper
             key={blog._id}
