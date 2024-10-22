@@ -7,7 +7,7 @@ export default async function Messages() {
 
   return (
     <ul className="flex flex-col space-y-2">
-      {messages.map((message) => (
+      {messages.map((message, index) => (
         <li key={message.id}>
           <div className="flex items-start gap-3 my-1">
             <div className="flex flex-col items-center flex-shrink-0 gap-2">
@@ -18,20 +18,24 @@ export default async function Messages() {
                 alt="user profile image"
                 className="mb-1 rounded-full"
               />
-              <div className="w-1 h-3 border-l-2 border-foreground"></div>
+              {index != messages.length - 1 && (
+                <div className="w-1 h-3 border-l-2 border-foreground"></div>
+              )}
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full ">
               <div className="flex items-center gap-2">
-                <p className="">{message.userFirstname}</p>
-                <span className="text-xs ">
+                <p>{message.userFirstname}</p>
+                <span className="text-xs text-muted-foreground">
                   {formatDistanceToNow(new Date(message.createdAt), {
                     addSuffix: true,
                   })}
                 </span>
               </div>
 
-              <p className="mt-1 text-xs font-light">{message.message}</p>
+              <p className="mt-1 text-xs font-light break-words">
+                {message.message}
+              </p>
             </div>
           </div>
         </li>
