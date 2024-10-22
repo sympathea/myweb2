@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <ClerkProviderWrapper>
       <html lang="en">
         <body className={`${roboto_mono.className}`}>
-          <div className="flex flex-col items-center max-w-5xl px-8 py-8 mx-auto sm:px-12 md:px-20 lg:px-12 2xl:max-w-7xl">
+          <div className="flex flex-col items-center max-w-4xl px-6 py-6 mx-auto lg:max-w-5xl sm:px-12 md:px-20 lg:px-12 xl:max-w-7xl">
             <Header />
             <main className="w-full">{children}</main>
           </div>
