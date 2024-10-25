@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Undo2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getBlogBySlug } from "@/lib/blog";
@@ -17,17 +17,18 @@ export default async function Blog({ params }) {
   const { title, summary, image, author, publishedAt, tag } = metadata;
 
   return (
-    <section className="flex gap-6 px-4 mx-auto max-w-7xl md:px-8">
-      <aside className="relative pt-14">
+    <section className="flex pr-8 mx-auto">
+      <aside className="relative hidden pt-14 2xl:block">
         <Link
           href="/blog"
-          className="sticky flex items-center p-2 font-light transition-colors rounded-full shadow-lg top-10 text-muted-foreground hover:text-foreground"
+          className="sticky flex items-center gap-1 py-2 pl-4 pr-5 rounded-full top-10  text-foreground font-semibold bg-[#f2f2f21a] "
         >
-          <Undo2 className="w-5 h-5" />
+          <ArrowLeft className="w-5 h-5" />
+          <span>Back</span>
         </Link>
       </aside>
 
-      <article className="max-w-4xl mx-auto mt-16">
+      <article className="w-full max-w-4xl mx-auto mt-16">
         <header>
           {image && (
             <div className="relative w-full mb-10 overflow-hidden rounded-lg h-96">
@@ -53,7 +54,7 @@ export default async function Blog({ params }) {
 
         <hr className="mt-10 border border-gray-400" />
 
-        <main className="mt-16 prose text-white max-w-none">
+        <main className="mt-16 prose max-w-none prose-p:text-foreground prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground prose-code:text-blue-500 prose-p:tracking-tight">
           <MDXRemote source={content} />
         </main>
       </article>
