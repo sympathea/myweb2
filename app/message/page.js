@@ -29,7 +29,9 @@ export default async function MessagePage() {
             />
           </MessageForm>
         ) : (
-          <h2>✌️ Please Log in</h2>
+          <div className="flex items-center justify-start h-20 px-10 pr-2 text-sm rounded-lg bg-secondary text-muted-foreground">
+            🔒 Please log in to leave a message
+          </div>
         )}
       </Suspense>
 
