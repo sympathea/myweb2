@@ -8,7 +8,7 @@ export default function Blogs({ blogs }) {
       <ul className="grid w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-2">
         {blogs.map((blog) => (
           <MotionDivWrapper
-            key={blog._id}
+            key={blog.slug}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
