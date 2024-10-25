@@ -40,9 +40,9 @@
     --muted-foreground: 0 0% 55%;
     --primary: 180 1.7% 76.5%;
     --primary-foreground: 186.7 22% 8%;
+    --secondary: 0 0% 94.9% / 5%;
 
     /* not finished */
-    --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --accent: 0 0% 14.5%;
     --accent-foreground: 180 1.7% 76.5%;

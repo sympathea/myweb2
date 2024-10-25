@@ -7,9 +7,7 @@ import { Skeleton } from "./ui/skeleton";
 export default function SignIn({ pathname }) {
   return (
     <div className="col-start-4">
-      <Suspense fallback={<Skeleton />}>
-        <SignInAndOut pathname={pathname} />
-      </Suspense>
+      <SignInAndOut pathname={pathname} />
     </div>
   );
 }

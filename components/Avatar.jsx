@@ -13,7 +13,7 @@ export default function Avatar({ page }) {
             ZL
           </div> */}
 
-        <div className="flex-col items-start justify-end hidden sm:flex">
+        <div className="flex flex-col items-start justify-end">
           <Image
             src={avatarImg}
             width={45}
@@ -24,9 +24,9 @@ export default function Avatar({ page }) {
         </div>
       </Link>
 
-      <div className="sm:hidden">
+      {/* <div className="sm:hidden">
         <MobileMenu />
-      </div>
+      </div> */}
     </div>
   );
 }
