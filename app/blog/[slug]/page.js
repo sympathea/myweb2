@@ -31,7 +31,7 @@ export default async function Blog({ params }) {
       <article className="w-full max-w-4xl mx-auto mt-16">
         <header>
           {image && (
-            <div className="relative w-full mb-10 overflow-hidden rounded-lg h-96">
+            <div className="relative w-full mb-10 overflow-hidden rounded-lg aspect-[240/135]">
               <Image
                 src={image}
                 alt={title || ""}
