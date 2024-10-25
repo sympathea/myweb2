@@ -7,12 +7,12 @@ const localization = {
       subtitle: "Create an account",
     },
   },
-  // signIn: {
-  //   start: {
-  //     title: "Welcome Back",
-  //     subtitle: "Sign in using one of the following",
-  //   },
-  // },
+  signIn: {
+    start: {
+      title: "Welcome Back",
+      subtitle: "Sign in to zephrlin.me",
+    },
+  },
 };
 
 export default function ClerkProviderWrapper({ children }) {
