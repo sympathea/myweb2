@@ -9,7 +9,7 @@ export default async function BlogPage() {
     <div className="flex flex-col gap-20 mt-16">
       <Description
         page="Blog"
-        description="Welcome to my blog! I will post some articles about my life, my work, and my thoughts here."
+        description="Welcome to my blog! I will post some articles about tech, my interests, and my thoughts here."
       />
 
       <Blogs blogs={blogs} />
