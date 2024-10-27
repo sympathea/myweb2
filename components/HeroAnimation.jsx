@@ -5,21 +5,15 @@ import { TypeAnimation } from "react-type-animation";
 export function DescriptionAnimation() {
   return (
     <TypeAnimation
-      sequence={[
-        1000,
-        "<developer /> ",
-        1000,
-        "learner .",
-        () => {
-          console.log("Sequence completed");
-        },
-      ]}
+      preRenderFirstString={true}
+      sequence={["", 5000, ""]}
       wrapper="span"
       cursor={true}
       repeat={Infinity}
       style={{
         whiteSpace: "pre-line",
-        fontSize: "2.2rem",
+        fontSize: "3.5rem",
+        fontWeight: "200",
         display: "inline-block",
         width: "full",
       }}

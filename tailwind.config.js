@@ -57,6 +57,25 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        "intro-scroll": {
+          "0%": {
+            transform: "translateY(0)",
+            // opacity: "0",
+          },
+          "20%": {
+            transform: "translateY(2px)",
+            // opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(8px)",
+            // opacity: "0",
+          },
+        },
+      },
+      animation: {
+        "intro-scroll": "intro-scroll 2s ease infinite",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

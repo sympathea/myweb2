@@ -2,10 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import MotionDivWrapper from "./MotionDivWrapper";
 
-export default function Blogs({ blogs }) {
+export default function Blogs({ blogs, isHome }) {
   return (
     <section>
-      <ul className="grid w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-2">
+      <ul
+        className={`grid grid-cols-1 gap-10 ${isHome ? "w-3/5" : "lg:grid-cols-2 w-full"}`}
+      >
         {blogs.map((blog) => (
           <MotionDivWrapper
             key={blog.slug}
@@ -17,7 +19,9 @@ export default function Blogs({ blogs }) {
             }}
           >
             <Link href={`/blog/${blog.slug}`}>
-              <div className="relative shadow-sm rounded-2xl ">
+              <div
+                className={`relative rounded-2xl ${isHome ? "shadow-[0_0px_1.2px_rgb(140,140,140)]" : ""}`}
+              >
                 <div
                   href={`/blog/${blog.slug}`}
                   className="relative aspect-[240/135] w-full opacity-70 hover:opacity-90"
