@@ -17,10 +17,10 @@ export default function Blogs({ blogs }) {
             }}
           >
             <Link href={`/blog/${blog.slug}`}>
-              <div className="relative shadow-sm opacity-50 rounded-2xl hover:opacity-90">
+              <div className="relative shadow-sm rounded-2xl ">
                 <div
                   href={`/blog/${blog.slug}`}
-                  className="relative aspect-[240/135] w-full"
+                  className="relative aspect-[240/135] w-full opacity-70 hover:opacity-90"
                 >
                   <Image
                     src={blog.image}
@@ -30,8 +30,11 @@ export default function Blogs({ blogs }) {
                   />
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-2 rounded-lg bg-opacity-30 backdrop-blur-sm">
-                  <h2 className="mb-4 font-bold">{blog.title}</h2>
+                <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg opacity-90 backdrop-blur-md">
+                  <h2 className="mb-2 font-bold">{blog.title}</h2>
+                  <p className="mb-4 text-sm text-muted-foreground ">
+                    {blog.publishedAt ?? ""} | {blog.tag}
+                  </p>
                   <p className="text-sm">{blog.summary}</p>
                 </div>
               </div>
