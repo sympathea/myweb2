@@ -58,23 +58,35 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "intro-scroll": {
+        "intro-scroll-outside": {
           "0%": {
             transform: "translateY(0)",
-            // opacity: "0",
           },
           "20%": {
             transform: "translateY(2px)",
-            // opacity: "1",
           },
           "100%": {
             transform: "translateY(8px)",
-            // opacity: "0",
+          },
+        },
+        "intro-scroll-inside": {
+          "0%": {
+            transform: "translateY(0)",
+            opacity: "0",
+          },
+          "20%": {
+            transform: "translateY(2px)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(8px)",
+            opacity: "0",
           },
         },
       },
       animation: {
-        "intro-scroll": "intro-scroll 2s ease infinite",
+        "intro-scroll-inside": "intro-scroll-inside 2s ease infinite",
+        "intro-scroll-outside": "intro-scroll-outside 2s ease infinite",
       },
     },
   },
