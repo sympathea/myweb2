@@ -6,7 +6,7 @@ export default function Blogs({ blogs, isHome }) {
   return (
     <section>
       <ul
-        className={`grid grid-cols-1 gap-10 ${isHome ? "w-3/5" : "lg:grid-cols-2 w-full"}`}
+        className={`grid grid-cols-1 gap-10 w-full ${isHome ? "" : "lg:grid-cols-2"}`}
       >
         {blogs.map((blog) => (
           <MotionDivWrapper

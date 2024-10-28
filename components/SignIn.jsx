@@ -1,8 +1,6 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { UserPlus } from "lucide-react";
-import { Suspense } from "react";
-import { Skeleton } from "./ui/skeleton";
 
 export default function SignIn({ pathname }) {
   return (

@@ -4,6 +4,7 @@ import SocialMediaLink from "@/components/SocialMediaLink";
 import { Github, Linkedin, Mail, Newspaper } from "lucide-react";
 import Blogs from "@/components/Blogs";
 import { getBlogs } from "@/lib/blog";
+import Link from "next/link";
 
 export default async function Page() {
   const blogs = await getBlogs();
@@ -15,8 +16,8 @@ export default async function Page() {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <section className="w-full mt-40 lg:w-2/3">
-        <div className="text-[42px] font-semibold mb-8">
+      <section className="w-full mt-40 mb-20 lg:w-2/3">
+        <div className="text-[42px] font-semibold mb-4">
           <span>{"<Developer/>,"}</span>
           <span className="relative inline-block px-2 py-1 border border-dashed bg-muted">
             {"Explorer"}
@@ -27,13 +28,13 @@ export default async function Page() {
           </span>
         </div>
 
-        <p className="flex gap-3 mb-12 text-3xl font-normal tracking-tight text-green-200 opacity-60">
+        <p className="flex gap-3 mb-8 text-2xl font-normal tracking-tight text-green-200 opacity-60">
           <span>#Zephyr</span>
           <span>#智昊</span>
           <span>#Zhihao</span>
         </p>
 
-        <p className="text-[18px] text-muted-foreground mb-10">
+        <p className="text-[16px] text-muted-foreground mb-4">
           I am an undergraduate student at University of Minnesota Twin Cities
           majoring in Computer Science. I am passionate about developing
           applications that merge aesthetics with purpose.
@@ -52,8 +53,23 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className="flex items-center justify-center w-full h-52">
-        <IntroScrollMouse />
+      <section className="flex flex-col items-start justify-center w-full gap-2 p-6 mb-16 border border-dashed rounded-lg lg:w-3/5 bg-muted">
+        {/* <IntroScrollMouse /> */}
+        <h2 className="text-xl text-green-200 opacity-60">Open to Work!</h2>
+        <div>
+          <p>
+            I am actively looking for Software Engineer Internship for Summer
+            2025. Welcome to check out my{" "}
+            <Link
+              className="underline"
+              href="/pdf/Zhihao-Lin-Resume.pdf"
+              target="_blank"
+            >
+              Resume
+            </Link>
+            .
+          </p>
+        </div>
       </section>
 
       <section>
@@ -62,7 +78,7 @@ export default async function Page() {
           <span className="text-lg font-semibold">Recent Update</span>
         </div>
 
-        <div>
+        <div className="w-full lg:w-3/5">
           <Blogs blogs={recentBlogs} isHome={true} />
         </div>
       </section>
