@@ -18,7 +18,7 @@ export default function Avatar({ page }) {
             src={avatarImg}
             width={60}
             alt="avatar"
-            className={`duration-1000 rounded-full opacity-70 hover:opacity-90 ${page == "/" ? "scale-150 translate-y-20 " : ""}`}
+            className={`duration-1000 rounded-full opacity-60 hover:opacity-90 ${page == "/" ? "scale-150 translate-y-20 " : ""}`}
             unoptimized
           />
         </div>

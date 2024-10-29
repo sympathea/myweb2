@@ -2,6 +2,7 @@ import "./global.css";
 import { Roboto_Mono } from "next/font/google";
 import ClerkProviderWrapper from "@/components/ClerkProviderWrapper";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <div className="flex flex-col items-center max-w-4xl px-6 py-6 mx-auto lg:max-w-5xl sm:px-12 md:px-20 lg:px-12 xl:max-w-7xl">
             <Header />
             <main className="w-full">{children}</main>
+            <Footer />
           </div>
         </body>
       </ClerkProviderWrapper>
