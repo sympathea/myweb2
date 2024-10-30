@@ -33,7 +33,7 @@ export default async function Page() {
         </div>
 
         <div className="pt-[266px] lg:w-[610px] w-full">
-          {/* <SkillsBar /> */}
+          <SkillsBar />
         </div>
       </section>
     </MotionDivWrapper>
