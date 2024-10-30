@@ -32,7 +32,7 @@ export default async function Page() {
           <Blogs blogs={recentBlogs} isHome={true} />
         </div>
 
-        <div className="pt-[266px] lg:w-[610px] w-full">
+        <div className="lg:pt-[266px] lg:w-[610px] w-full">
           <SkillsBar />
         </div>
       </section>
