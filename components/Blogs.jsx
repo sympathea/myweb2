@@ -4,48 +4,46 @@ import MotionDivWrapper from "./MotionDivWrapper";
 
 export default function Blogs({ blogs, isHome }) {
   return (
-    <section>
-      <ul
-        className={`grid grid-cols-1 gap-10 w-full ${isHome ? "" : "lg:grid-cols-2"}`}
-      >
-        {blogs.map((blog) => (
-          <MotionDivWrapper
-            key={blog.slug}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              opacity: { duration: 0.5 },
-              y: { duration: 0.2 },
-            }}
-          >
-            <Link href={`/blog/${blog.slug}`}>
+    <ul
+      className={`grid grid-cols-1 gap-10 w-full ${isHome ? "" : "lg:grid-cols-2"}`}
+    >
+      {blogs.map((blog) => (
+        <MotionDivWrapper
+          key={blog.slug}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            opacity: { duration: 0.5 },
+            y: { duration: 0.2 },
+          }}
+        >
+          <Link href={`/blog/${blog.slug}`}>
+            <div
+              className={`relative rounded-2xl ${isHome ? "shadow-[0_0px_1.2px_rgb(140,140,140)]" : ""}`}
+            >
               <div
-                className={`relative rounded-2xl ${isHome ? "shadow-[0_0px_1.2px_rgb(140,140,140)]" : ""}`}
+                href={`/blog/${blog.slug}`}
+                className="relative aspect-[240/135] w-full opacity-70 hover:opacity-90"
               >
-                <div
-                  href={`/blog/${blog.slug}`}
-                  className="relative aspect-[240/135] w-full opacity-70 hover:opacity-90"
-                >
-                  <Image
-                    src={blog.image}
-                    alt="Blog image"
-                    fill
-                    className="object-cover rounded-2xl "
-                  />
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg opacity-90 backdrop-blur-md">
-                  <h2 className="mb-2 font-bold">{blog.title}</h2>
-                  <p className="mb-4 text-sm text-muted-foreground ">
-                    {blog.publishedAt ?? ""} | {blog.tag}
-                  </p>
-                  <p className="text-sm">{blog.summary}</p>
-                </div>
+                <Image
+                  src={blog.image}
+                  alt="Blog image"
+                  fill
+                  className="object-cover rounded-2xl "
+                />
               </div>
-            </Link>
-          </MotionDivWrapper>
-        ))}
-      </ul>
-    </section>
+
+              <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg opacity-90 backdrop-blur-md">
+                <h2 className="mb-2 font-bold">{blog.title}</h2>
+                <p className="mb-4 text-sm text-muted-foreground ">
+                  {blog.publishedAt ?? ""} | {blog.tag}
+                </p>
+                <p className="text-sm">{blog.summary}</p>
+              </div>
+            </div>
+          </Link>
+        </MotionDivWrapper>
+      ))}
+    </ul>
   );
 }
