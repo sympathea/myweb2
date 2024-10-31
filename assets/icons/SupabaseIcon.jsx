@@ -18,8 +18,8 @@ export default function SupabaseIcon(props) {
           y2="36.033"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#7dffce"></stop>
-          <stop offset="1" stop-color="#50c08d"></stop>
+          <stop offset="0" stopColor="#7dffce"></stop>
+          <stop offset="1" stopColor="#50c08d"></stop>
         </linearGradient>
         <path
           fill="url(#SVGID_1__sH0rW2TvYdr9_gr1)"
@@ -33,8 +33,8 @@ export default function SupabaseIcon(props) {
           y2="19.425"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#7dffce"></stop>
-          <stop offset="1" stop-color="#50c08d"></stop>
+          <stop offset="0" stopColor="#7dffce"></stop>
+          <stop offset="1" stopColor="#50c08d"></stop>
         </linearGradient>
         <path
           fill="url(#SVGID_00000140728474547789280440000018204366184369975479__sH0rW2TvYdr9_gr2)"

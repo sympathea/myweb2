@@ -18,8 +18,8 @@ export default function ViteIcon(props) {
         gradientTransform="matrix(1 0 0 -1 0 514)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#41d1ff"></stop>
-        <stop offset="1" stop-color="#9231be"></stop>
+        <stop offset="0" stopColor="#41d1ff"></stop>
+        <stop offset="1" stopColor="#9231be"></stop>
       </linearGradient>
       <path
         fill="url(#oOTIjsOjTqJdvfy5S4iCZa_dJjTWMogzFzg_gr1)"
@@ -34,8 +34,8 @@ export default function ViteIcon(props) {
         gradientTransform="matrix(1 0 0 -1 0 514)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fed100"></stop>
-        <stop offset="1" stop-color="#e36001"></stop>
+        <stop offset="0" stopColor="#fed100"></stop>
+        <stop offset="1" stopColor="#e36001"></stop>
       </linearGradient>
       <path
         fill="url(#oOTIjsOjTqJdvfy5S4iCZb_dJjTWMogzFzg_gr2)"
