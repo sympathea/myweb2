@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import MotionDivWrapper from "./MotionDivWrapper";
 
 export default function Blogs({ blogs, isHome }) {
   return (
@@ -8,15 +7,7 @@ export default function Blogs({ blogs, isHome }) {
       className={`grid grid-cols-1 gap-10 w-full ${isHome ? "" : "lg:grid-cols-2"}`}
     >
       {blogs.map((blog) => (
-        <MotionDivWrapper
-          key={blog.slug}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            opacity: { duration: 0.5 },
-            y: { duration: 0.2 },
-          }}
-        >
+        <div key={blog.slug}>
           <Link href={`/blog/${blog.slug}`}>
             <div
               className={`relative rounded-2xl ${isHome ? "shadow-[0_0px_1.2px_rgb(140,140,140)]" : ""}`}
@@ -42,7 +33,7 @@ export default function Blogs({ blogs, isHome }) {
               </div>
             </div>
           </Link>
-        </MotionDivWrapper>
+        </div>
       ))}
     </ul>
   );

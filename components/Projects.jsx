@@ -1,22 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import MotionDivWrapper from "./MotionDivWrapper";
 
 export default function Projects({ projects }) {
   return (
     <section>
       <ul className="grid w-full grid-cols-1 gap-5 mx-auto sm:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
-          <MotionDivWrapper
-            key={project._id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              opacity: { duration: 0.5 },
-              y: { duration: 0.2 },
-            }}
-          >
+          <div key={project._id}>
             <Link href={project.link} target="_blank">
               <div className="relative flex flex-col items-start justify-center gap-6 p-5 border-dashed border-[0.8px] border-transparent rounded-2xl hover:border-muted-foreground hover:bg-muted">
                 <div className="relative flex items-center justify-center w-12 h-12 shadow-[0_0px_3px_rgb(180,180,180)] rounded-full ">
@@ -42,7 +33,7 @@ export default function Projects({ projects }) {
                 </div>
               </div>
             </Link>
-          </MotionDivWrapper>
+          </div>
         ))}
       </ul>
     </section>

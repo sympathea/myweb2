@@ -14,7 +14,7 @@ export default async function MessagePage() {
   const user = await currentUser();
 
   return (
-    <div className="flex flex-col w-full gap-20 mt-16 lg:w-2/3">
+    <div className="flex flex-col w-full gap-20 lg:w-2/3">
       <MessageDescription />
 
       <Suspense fallback={<GuestBookFormLoading />}>

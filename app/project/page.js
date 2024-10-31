@@ -1,8 +1,8 @@
 import Projects from "@/components/Projects";
 import { client } from "@/lib/sanity";
-import { revalidatePath } from "next/cache";
 
 import Description from "@/components/Description";
+import MotionDivWrapper from "@/components/MotionDivWrapper";
 
 export default async function ProjectPage() {
   // revalidatePath("/project");
@@ -18,12 +18,17 @@ export default async function ProjectPage() {
   const projects = await client.fetch(query);
 
   return (
-    <div className="flex flex-col gap-20 mt-16 ">
+    <MotionDivWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-20"
+    >
       <Description
         page="Project"
         description="Showcase my exploration and experimentation in the computer science field. Progressing...."
       />
       <Projects projects={projects} />
-    </div>
+    </MotionDivWrapper>
   );
 }

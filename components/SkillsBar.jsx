@@ -15,7 +15,7 @@ import ViteIcon from "@/assets/icons/ViteIcon";
 
 export default function SkillsBar() {
   return (
-    <div className="flex flex-col items-start justify-center w-full gap-6 p-6 mb-16 shadow-[0_0px_1.2px_rgb(140,140,140)] rounded-lg sticky top-10">
+    <div className="flex flex-col items-start justify-center w-full gap-6 p-6 mb-16 shadow-[0_0px_1.2px_rgb(140,140,140)] rounded-lg sticky -top-10">
       {/* <IntroScrollMouse /> */}
       <h2 className="text-xl text-green-200 opacity-60">Tech Stacks</h2>
       <div>
