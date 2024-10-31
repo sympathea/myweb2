@@ -8,7 +8,7 @@ export default function Footer() {
         <p>
           &copy; {new Date().getFullYear()} Zephyr Lin. All rights reserved.
         </p>
-        <p className="opacity-90">Made with Love and Cheesecake.</p>
+        <p className="opacity-90">Made with passion and love</p>
       </div>
     </div>
   );
