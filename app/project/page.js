@@ -3,6 +3,7 @@ import { client } from "@/lib/sanity";
 
 import Description from "@/components/Description";
 import MotionDivWrapper from "@/components/MotionDivWrapper";
+import { revalidatePath } from "next/cache";
 
 export default async function ProjectPage() {
   revalidatePath("/project");
