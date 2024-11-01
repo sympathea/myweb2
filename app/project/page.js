@@ -5,7 +5,7 @@ import Description from "@/components/Description";
 import MotionDivWrapper from "@/components/MotionDivWrapper";
 
 export default async function ProjectPage() {
-  // revalidatePath("/project");
+  revalidatePath("/project");
   const query = `*[_type == 'project'] | order(_updatedAt desc) {
         title,
           _id,
