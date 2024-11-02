@@ -1,5 +1,3 @@
-import Socials from "./Socials";
-
 export default function Footer() {
   return (
     <div className="w-full mt-20 text-muted-foreground ">
@@ -8,7 +6,7 @@ export default function Footer() {
         <p>
           &copy; {new Date().getFullYear()} Zephyr Lin. All rights reserved.
         </p>
-        <p className="opacity-90">Made with passion and love</p>
+        <div className=" opacity-90">Made with love and 🍰</div>
       </div>
     </div>
   );
