@@ -10,11 +10,11 @@ export default function Blogs({ blogs, isHome }) {
         <div key={blog.slug}>
           <Link href={`/blog/${blog.slug}`}>
             <div
-              className={`relative rounded-2xl ${isHome ? "shadow-[0_0px_1.2px_rgb(140,140,140)]" : ""}`}
+              className={`relative rounded-2xl ${isHome ? "shadow-[0_0px_1.2px_rgb(140,140,140)]" : ""} opacity-70 hover:opacity-90`}
             >
               <div
                 href={`/blog/${blog.slug}`}
-                className="relative aspect-[240/135] w-full opacity-70 hover:opacity-90"
+                className="relative aspect-[240/135] w-full "
               >
                 <Image
                   src={blog.image}
@@ -24,12 +24,14 @@ export default function Blogs({ blogs, isHome }) {
                 />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg opacity-90 backdrop-blur-md">
+              <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg backdrop-blur-md ">
                 <h2 className="mb-2 font-bold">{blog.title}</h2>
-                <p className="mb-4 text-sm text-muted-foreground ">
+                <p className="mb-4 text-sm text-muted-foreground">
                   {blog.publishedAt ?? ""} | {blog.tag}
                 </p>
-                <p className="text-sm">{blog.summary}</p>
+                <p className="text-sm text-transparent bg-gradient-to-l from-muted-foreground via-foreground to-muted-foreground bg-clip-text">
+                  {blog.summary}
+                </p>
               </div>
             </div>
           </Link>
