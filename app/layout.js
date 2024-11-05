@@ -9,8 +9,9 @@ import { Analytics } from "@vercel/analytics/react";
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Zephr Lin",
-  description: "Hi, I'm' Zephyr Lin.",
+  title: "Zephyr Lin | Developer",
+  description:
+    "Hi, I'm Zephyr Lin, an undergraduate student at University of Minnesota Twin Cities majoring in Computer Science. I am passionate about developing applications that merge aesthetics with purpose.",
 };
 
 export default function RootLayout({ children }) {
