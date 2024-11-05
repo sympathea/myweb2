@@ -5,6 +5,7 @@ import { getBlogs } from "@/lib/blog";
 import Hero from "@/components/Hero";
 import OpenToWork from "@/components/OpenToWork";
 import SkillsBar from "@/components/SkillsBar";
+import Aboutme from "@/components/Aboutme";
 
 export default async function Page() {
   const blogs = await getBlogs();
@@ -21,19 +22,19 @@ export default async function Page() {
       </section>
 
       <section className="relative flex flex-col justify-between w-full gap-10 lg:flex-row">
-        <div>
-          <OpenToWork />
-
-          <div className="flex items-center justify-start gap-3 mb-10">
+        <div className="w-full">
+          {/* <Aboutme /> */}
+          <div className="flex items-center justify-start w-full gap-3 mb-10">
             <Newspaper />
             <span className="text-lg font-semibold">Recent Update</span>
           </div>
           <Blogs blogs={recentBlogs} isHome={true} />
         </div>
 
-        <div className="lg:w-[610px] w-full">
+        <aside className="lg:w-[680px] w-full lg:sticky lg:h-fit lg:-top-10">
+          {/* <OpenToWork /> */}
           <SkillsBar />
-        </div>
+        </aside>
       </section>
     </MotionDivWrapper>
   );
