@@ -1,10 +1,10 @@
 export default function Aboutme() {
   return (
     <div className="w-full mb-16 rounded-lg">
-      <h2 className="pl-2 mb-2 text-xl font-bold text-green-200 opacity-60">
+      <h2 className="pl-2 mb-10 text-2xl font-bold text-green-200 opacity-60">
         About Me
       </h2>
-      <ul className="flex flex-col opacity-80">
+      <ul className="flex flex-col gap-5 pl-6 list-disc opacity-80">
         <li>
           👋 You can call me <span className="font-bold ">Zephyr</span>,{" "}
           <span className="font-bold">Zhihao</span> or{" "}
@@ -12,10 +12,11 @@ export default function Aboutme() {
         </li>
 
         <li>
-          🌎 Current Location: <span className="font-bold">Amherst, MA</span>.
+          🌎 Current Location:{" "}
+          <span className="font-bold">Amherst, MA, US</span>.
         </li>
         <li>
-          ✈️ I lived in{" "}
+          ✈️ Lived in{" "}
           <a
             className="font-bold"
             href="https://en.wikipedia.org/wiki/Minneapolis"
@@ -42,8 +43,8 @@ export default function Aboutme() {
           in the past.
         </li>
         <li>
-          🎧 I&apos;m a music lover, especially drawn to Chinese R&B. Favorites
-          musicians are Khalil Fong and Coldplay.
+          🎧 I&apos;m especially drawn to Chinese R&B. Favorites musicians are
+          Khalil Fong and Coldplay.
         </li>
       </ul>
     </div>

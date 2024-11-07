@@ -15,11 +15,11 @@ import ViteIcon from "@/assets/icons/ViteIcon";
 
 export default function SkillsBar() {
   return (
-    <div className="flex flex-col items-start justify-center w-full gap-6 p-6 mb-16 shadow-[0_0px_1.2px_rgb(140,140,140)] rounded-lg ">
+    <div className="flex flex-col items-start justify-center w-full gap-6 mb-16 font-semibold rounded-lg ">
       {/* <IntroScrollMouse /> */}
-      <h2 className="text-xl text-green-200 opacity-60">Tech Stacks</h2>
+      <h2 className="text-2xl text-green-200 opacity-60">Tech Stacks</h2>
       <div>
-        <h3 className="mb-4 text-lg font-semibold">Frontend</h3>
+        <h3 className="mb-4 text-lg">Frontend</h3>
         <ul>
           <li className="flex items-center gap-10 mb-2">
             <div className="flex gap-2 ">
@@ -27,9 +27,7 @@ export default function SkillsBar() {
               <CSSIcon className="skillsIcon" />
               <JSIcon className="skillsIcon" />
             </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              HTML + CSS + JS
-            </div>
+            <div>HTML + CSS + JS</div>
           </li>
           <li className="flex items-center gap-10 mb-2">
             <div className="flex gap-2 ">
@@ -37,15 +35,13 @@ export default function SkillsBar() {
               <ViteIcon className="skillsIcon" />
               <TailwindIcon className="skillsIcon" />
             </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              React + Vite + Tailwind
-            </div>
+            <div>React + Vite + Tailwind</div>
           </li>
         </ul>
       </div>
 
       <div>
-        <h3 className="mb-4 text-lg font-semibold">Backend</h3>
+        <h3 className="mb-4 text-lg">Backend</h3>
         <ul>
           <li className="flex items-center gap-10 mb-2">
             <div className="flex gap-2 ">
@@ -54,9 +50,7 @@ export default function SkillsBar() {
               <MySQLIcon className="skillsIcon" />
             </div>
 
-            <div className="text-sm font-semibold text-muted-foreground">
-              Java + Spring Boot + MySQL
-            </div>
+            <div>Java + Spring Boot + MySQL</div>
           </li>
 
           <li className="flex items-center gap-10 mb-2">
@@ -65,24 +59,20 @@ export default function SkillsBar() {
               <ExpressIcon className="skillsIcon" />
               <MongoIcon className="skillsIcon" />
             </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              Node.js + Express + MongoDB
-            </div>
+            <div>Node.js + Express + MongoDB</div>
           </li>
         </ul>
       </div>
 
       <div>
-        <h3 className="mb-4 text-lg font-semibold">Fullstack</h3>
+        <h3 className="mb-4 text-lg">Fullstack</h3>
         <ul>
           <li className="flex items-center gap-20 mb-2">
             <div className="flex gap-2 ">
               <NextIcon className="skillsIcon" />
               <SupabaseIcon className="skillsIcon" />
             </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              Next.js + Supabase
-            </div>
+            <div>Next.js + Supabase</div>
           </li>
         </ul>
       </div>

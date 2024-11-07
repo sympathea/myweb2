@@ -88,6 +88,9 @@ module.exports = {
         "intro-scroll-inside": "intro-scroll-inside 2s ease infinite",
         "intro-scroll-outside": "intro-scroll-outside 2s ease infinite",
       },
+      backgroundImage: {
+        "bg-image": "url('../public/images/home/bg.png')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

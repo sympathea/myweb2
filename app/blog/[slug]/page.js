@@ -31,7 +31,7 @@ export default async function Blog({ params }) {
       <article className="w-full max-w-4xl mx-auto mt-16">
         <header>
           {image && (
-            <div className="relative w-full mb-10 overflow-hidden rounded-lg aspect-[240/135]">
+            <div className="relative w-2/3 flex justify-center items-center mb-10 overflow-hidden rounded-lg aspect-[240/135]">
               <Image
                 src={image}
                 alt={title || ""}
@@ -52,7 +52,7 @@ export default async function Blog({ params }) {
           <p className="">{summary}</p>
         </header>
 
-        <hr className="mt-10 border border-gray-400" />
+        <hr className="mt-10 border-[0.5px] border-muted-foreground" />
 
         <main className="mt-16 prose max-w-none prose-p:text-foreground prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground prose-code:text-blue-500 prose-p:tracking-tight">
           <MDXRemote source={content} />
