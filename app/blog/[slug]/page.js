@@ -28,10 +28,10 @@ export default async function Blog({ params }) {
         </Link>
       </aside>
 
-      <article className="w-full max-w-4xl mx-auto mt-16">
+      <article className="w-full max-w-3xl mx-auto mt-16">
         <header>
           {image && (
-            <div className="relative w-2/3 flex justify-center items-center mb-10 overflow-hidden rounded-lg aspect-[240/135]">
+            <div className="relative w-full flex justify-center items-center mb-10 overflow-hidden rounded-lg aspect-[240/135]">
               <Image
                 src={image}
                 alt={title || ""}
