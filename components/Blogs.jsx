@@ -8,7 +8,7 @@ export default function Blogs({ blogs }) {
         <li key={blog.slug} className="mb-10">
           <Link href={`/blog/${blog.slug}`}>
             <div
-              className={`flex w-full items-center gap-6 rounded-2xl  p-3 opacity-90 hover:opacity-100`}
+              className={`flex w-full lg:w-4/5 items-stretch gap-6 rounded-2xl shadow-[0_0px_0.8px_rgb(140,140,140)] p-3 opacity-90 hover:opacity-100 bg-background hover:bg-muted`}
             >
               <div
                 href={`/blog/${blog.slug}`}
@@ -22,11 +22,13 @@ export default function Blogs({ blogs }) {
                 />
               </div>
 
-              <div className="p-4 rounded-lg backdrop-blur-md">
-                <h2 className="mb-2 font-bold">{blog.title}</h2>
-                <p className="mb-4 text-sm text-muted-foreground">
-                  {blog.publishedAt ?? ""} | {blog.tag}
-                </p>
+              <div className="flex flex-col justify-between flex-grow p-4 rounded-lg">
+                <div>
+                  <h2 className="mb-2 font-bold">{blog.title}</h2>
+                  <p className="text-sm text-muted-foreground">
+                    {blog.publishedAt ?? ""} | {blog.tag}
+                  </p>
+                </div>
                 <p className="text-sm ">{blog.summary}</p>
               </div>
             </div>

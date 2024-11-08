@@ -6,7 +6,7 @@ export function HeroAnimation() {
   return (
     <TypeAnimation
       preRenderFirstString={true}
-      sequence={["<Developer />", 2000, "<Explorer />", 2000]}
+      sequence={["<Developer />", 2000, "", 2000]}
       wrapper="span"
       cursor={true}
       repeat={Infinity}

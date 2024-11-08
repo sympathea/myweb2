@@ -1,12 +1,10 @@
 export default function BasisInfo() {
   return (
-    <div className="w-full mb-16 rounded-lg">
-      <h2 className="mb-10 text-2xl font-bold text-green-200 opacity-60">
-        Basic Info
-      </h2>
-      <ul className="flex flex-col gap-5 pl-6 list-disc opacity-80">
+    <div className="w-full  rounded-lg shadow-[0_0px_1.2px_rgb(140,140,140)] p-6">
+      <h2 className="mb-6 text-xl text-green-200 opacity-60">About Me</h2>
+      <ul className="flex flex-col gap-5 pl-6 text-sm list-disc opacity-80">
         <li>
-          👋 You can call me <span className="font-bold ">Zephyr</span>,{" "}
+          👋 You can call me <span className="font-bold">Zephyr</span>,{" "}
           <span className="font-bold">Zhihao</span> or{" "}
           <span className="font-bold">智昊</span>.
         </li>
