@@ -1,17 +1,19 @@
 # zephyrlin.me
 
-Source code of my personal website.
+## Desciption
+
+A personal website built with Next.js.
 
 ## Tech Stacks
 
-Framework: **React + Next.js**
-Styling: **Tailwind CSS** + **Shadcn UI**
-Animation: **Framer Motion**
-Database: **Supabase**
-ORM: **Prisma**
-CMS: **Sanity**
-Authentication: **Clerk**
-Deployment: **Vercel**
+- Framework: **React + Next.js**
+- Styling: **Tailwind CSS** + **Shadcn UI**
+- Animation: **Framer Motion**
+- Database: **Supabase**
+- ORM: **Prisma**
+- CMS: **Sanity**
+- Authentication: **Clerk**
+- Deployment: **Vercel**
 
 ## Get Started
 
@@ -54,7 +56,5 @@ NEXT_PUBLIC_SANITY_ID=
 ```bash
 npm run dev
 ```
-
-### Open your browser
 
 Navigate to http://localhost:3000 to see the website in action.
