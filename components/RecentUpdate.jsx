@@ -7,7 +7,7 @@ export default function RecentUpdate({ blogs }) {
       {blogs.map((blog) => (
         <div key={blog.slug}>
           <Link href={`/blog/${blog.slug}`}>
-            <div className="relative rounded-2xlshadow-[0_0px_1.2px_rgb(140,140,140)] opacity-70 hover:opacity-90">
+            <div className="relative rounded-2xl hover:shadow-[0_0px_2px_rgb(140,140,140)] shadow-[0_0px_1.2px_rgb(140,140,140)] opacity-70 hover:opacity-90">
               <div
                 href={`/blog/${blog.slug}`}
                 className="relative aspect-[240/135] w-full "

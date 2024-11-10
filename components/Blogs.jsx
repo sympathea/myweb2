@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function Blogs({ blogs }) {
   return (
     <ul>
-      {blogs.map((blog) => (
-        <li key={blog.slug} className="mb-10">
+      {blogs.map((blog, i) => (
+        <li key={blog.slug} className="mb-5 sm:mb-10">
           <Link href={`/blog/${blog.slug}`}>
             <div
-              className={`flex w-full lg:w-4/5 items-stretch gap-6 rounded-2xl shadow-[0_0px_0.8px_rgb(140,140,140)] p-3 opacity-90 hover:opacity-100 bg-background hover:bg-muted`}
+              className={`flex flex-col sm:flex-row w-full lg:w-4/5 items-stretch gap-6 rounded-2xl shadow-[0_0px_1.2px_rgb(140,140,140)] hover:shadow-[0_0px_2px_rgb(140,140,140)] p-3 opacity-90 hover:opacity-100 bg-[#0A0C0C] hover:bg-muted`}
             >
               <div
                 href={`/blog/${blog.slug}`}
@@ -33,6 +33,9 @@ export default function Blogs({ blogs }) {
               </div>
             </div>
           </Link>
+          {blogs.length - 1 != i && (
+            <div className="w-full mt-5 border-[0.5px] sm:hidden border-muted-foreground"></div>
+          )}
         </li>
       ))}
     </ul>
