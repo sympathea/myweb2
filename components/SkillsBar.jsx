@@ -1,17 +1,17 @@
-import CSSIcon from "@/assets/icons/CSSIcon";
-import ExpressIcon from "@/assets/icons/ExpressIcon";
-import HtmlIcon from "@/assets/icons/HtmlIcon";
-import JavaIcon from "@/assets/icons/JavaIcon";
-import JSIcon from "@/assets/icons/JSIcon";
-import MongoIcon from "@/assets/icons/MongoIcon";
-import MySQLIcon from "@/assets/icons/MySQLIcon";
-import NextIcon from "@/assets/icons/NextIcon";
-import NodeIcon from "@/assets/icons/NodeIcon";
-import ReactIcon from "@/assets/icons/ReactIcon";
-import SpringIcon from "@/assets/icons/SpringIcon";
-import SupabaseIcon from "@/assets/icons/SupabaseIcon";
-import TailwindIcon from "@/assets/icons/TailwindIcon";
-import ViteIcon from "@/assets/icons/ViteIcon";
+import CSSIcon from "@/public/icons/CSSIcon";
+import ExpressIcon from "@/public/icons/ExpressIcon";
+import HtmlIcon from "@/public/icons/HtmlIcon";
+import JavaIcon from "@/public/icons/JavaIcon";
+import JSIcon from "@/public/icons/JSIcon";
+import MongoIcon from "@/public/icons/MongoIcon";
+import MySQLIcon from "@/public/icons/MySQLIcon";
+import NextIcon from "@/public/icons/NextIcon";
+import NodeIcon from "@/public/icons/NodeIcon";
+import ReactIcon from "@/public/icons/ReactIcon";
+import SpringIcon from "@/public/icons/SpringIcon";
+import SupabaseIcon from "@/public/icons/SupabaseIcon";
+import TailwindIcon from "@/public/icons/TailwindIcon";
+import ViteIcon from "@/public/icons/ViteIcon";
 
 export default function SkillsBar() {
   return (

@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MobileMenu } from "./MobileMenu";
-import avatarImg from "@/public/images/home/avatar.png";
+import avatarImg from "@/public/images/avatar.png";
 
 export default function Avatar({ page }) {
   return (
