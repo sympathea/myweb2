@@ -1,10 +1,6 @@
-<h1 align="center">
-  zephyrlin.me
-</h1>
+# zephyrlin.me
 
-<p align="center">
 A simple personal website built with Next.js
-</p>
 
 ![home page picture](./public/images/home.png)
 
