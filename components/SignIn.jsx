@@ -2,15 +2,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { UserPlus } from "lucide-react";
 
-export default function SignIn({ pathname }) {
-  return (
-    <div className="col-start-4">
-      <SignInAndOut pathname={pathname} />
-    </div>
-  );
-}
-
-function SignInAndOut({ pathname }) {
+export default function SignInAndOut({ pathname }) {
   return (
     <div className="flex items-center justify-end h-14">
       <SignedOut>
@@ -19,11 +11,7 @@ function SignInAndOut({ pathname }) {
           forceRedirectUrl={pathname}
           signUpForceRedirectUrl={pathname}
         >
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-xl opacity-70 hover:opacity-100"
-          >
+          <Button variant="ghost" size="icon" className="rounded-xl">
             <UserPlus />
           </Button>
         </SignInButton>

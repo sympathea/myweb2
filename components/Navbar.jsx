@@ -59,7 +59,7 @@ export default function Navbar({ page }) {
         </ul>
       </div>
 
-      <div className="flex items-center justify-end col-start-3 sm:hidden">
+      <div className="flex items-center justify-center sm:hidden">
         <MobileMenu />
       </div>
     </>

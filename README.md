@@ -19,12 +19,12 @@ A personal website built with Next.js.
 
 ### Environment
 
-- [Node.js 18.18](https://nodejs.org/) or later.
+- [Node.js 18.18](https://nodejs.org/){:target="\_blank"} or later.
 
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/eurooooo/zephyrlin.me.git`
+git clone https://github.com/eurooooo/zephyrlin.me.git
 cd zephyrlin.me
 ```
 
