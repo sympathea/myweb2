@@ -19,7 +19,7 @@ A personal website built with Next.js.
 
 ### Environment
 
-- [Node.js 18.18](https://nodejs.org/){:target="\_blank"} or later.
+- <a href="https://nodejs.org/" target="_blank">Node.js 18.18</a> or later.
 
 ### Clone the repository:
 
