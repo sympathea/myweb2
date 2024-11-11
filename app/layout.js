@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scrollbar-none">
       <ClerkProviderWrapper>
         <body className={`${roboto_mono.className} bg-bg-image `}>
-          <div className="flex flex-col items-center max-w-4xl px-6 py-6 mx-auto lg:max-w-5xl sm:px-12 md:px-20 lg:px-12 xl:max-w-7xl min-h-svh ">
+          <div className="flex flex-col items-center max-w-4xl px-4 pt-10 mx-auto lg:max-w-5xl sm:px-12 md:px-20 lg:px-12 xl:max-w-7xl min-h-svh ">
             <Header />
             <MainWrapper>{children}</MainWrapper>
             <Footer />
