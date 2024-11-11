@@ -1,10 +1,14 @@
-# zephyrlin.me
+<h1 align="center">
+  zephyrlin.me
+</h1>
 
-## Desciption
+<p align="center">
+A simple personal website built with Next.js
+</p>
 
-A personal website built with Next.js.
+![home page picture](./public/images/home.png)
 
-## Tech Stacks
+## ⚙️ Tech Stacks
 
 - Framework: **React + Next.js**
 - Styling: **Tailwind CSS** + **Shadcn UI**
@@ -15,7 +19,7 @@ A personal website built with Next.js.
 - Authentication: **Clerk**
 - Deployment: **Vercel**
 
-## Get Started
+## 💡Get Started
 
 ### Environment
 
