@@ -17,7 +17,7 @@
 
 ### Environment
 
-- [Node.js 18.18]("https://nodejs.org/") or later.
+- [Node.js 18.18](https://nodejs.org/) or later.
 
 ### Clone the repository:
 
@@ -60,11 +60,11 @@ Now we need to set all the environment variables.
 
 #### Supabase
 
-1. Go to [Supabase](https://supabase.com/). Create a new project. **Important:** store the password here somewhere as you will be using it in the 3th step. Wait a few minutes for supabase to set up the project.
+1. Go to [Supabase](https://supabase.com/). Create a new project. **Important:** store the password here somewhere as you will be using it in the 3rd step. Wait a few minutes for supabase to set up the project.
    ![supabase2](./public/images/supabase1.png)
 2. Click "connect" on the right top corner and select ORMs:
    ![supabase3](./public/images/supabase2.png)
-3. Copy paste the environment variables to .env file. Replace the placeholder for password to the password you stored in the 1th step.
+3. Copy paste the environment variables to .env file. Replace the placeholder for password to the password you stored in the 1st step.
 
 4. In terminal run:
 
@@ -80,55 +80,55 @@ npx prisma db push
 npm create sanity@latest -- --template clean --create-project "zephyrlin.me" --dataset production  --output-path sanity
 ```
 
-2. Then you will probably to be asked to sign in. After you sign in, follow the instructions:
+2. Then you will probably be asked to sign in. After you sign in, follow the instructions:
    ![sanity1](./public/images/sanity1.png)
 
 3. Go to /sanity/schemaTypes folder. Paste the following code to index.js:
 
-```
-import {projectsType} from './project'
+```javascript
+import { projectsType } from "./project";
 
-export const schemaTypes = [projectsType]
+export const schemaTypes = [projectsType];
 ```
 
 In the same folder, add a file named "project.js":
 
-```
-import {defineField, defineType} from 'sanity'
+```javascript
+import { defineField, defineType } from "sanity";
 
 export const projectsType = defineType({
-  name: 'project',
-  title: 'Project',
-  type: 'document',
+  name: "project",
+  title: "Project",
+  type: "document",
   fields: [
     defineField({
-      name: 'title',
-      type: 'string',
+      name: "title",
+      type: "string",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'image',
-      type: 'image',
+      name: "image",
+      type: "image",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'description',
-      type: 'text',
+      name: "description",
+      type: "text",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'link',
-      type: 'url',
+      name: "link",
+      type: "url",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'tags',
-      type: 'array',
-      of: [{type: 'string'}],
+      name: "tags",
+      type: "array",
+      of: [{ type: "string" }],
       validation: (Rule) => Rule.required().min(1),
     }),
   ],
-})
+});
 ```
 
 4. Go to [sanity website](https://www.sanity.io/manage) to get project id and assign it to NEXT_PUBLIC_SANITY_ID in .env file.
@@ -140,7 +140,7 @@ cd sanity
 npm run dev
 ```
 
-6. Navigate to [localhost:3333](http://localhost:3000), now you can add projects to the website.
+6. Navigate to [localhost:3333](http://localhost:3333), now you can add projects to the website.
 
 ### Run the server
 
@@ -150,4 +150,4 @@ npm run dev
 npm run dev
 ```
 
-Navigate to http://localhost:3000 to see the website in action.
+Navigate to [localhost:3000](http://localhost:3000) to see the website in action.
