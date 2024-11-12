@@ -1,8 +1,6 @@
 # zephyrlin.me
 
-A personal website built with Next.js
-
-<!-- ![home page picture](./public/images/home.png) -->
+![home page picture](./public/images/home.png)
 
 ## ⚙️ Tech Stacks
 
