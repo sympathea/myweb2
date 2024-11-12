@@ -1,5 +1,7 @@
 # zephyrlin.me
 
+[简体中文](./README_CN.md)
+
 ![home page picture](./public/images/home.png)
 
 ## ⚙️ Tech Stacks
