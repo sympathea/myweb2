@@ -55,28 +55,98 @@ Now we need to set all the environment variables.
 
 #### Clerk
 
-1. Go to [Clerk website](https://clerk.com/) and create an account.
-2. Create an application, select google and github as sign in options:
+1. Go to [Clerk website](https://clerk.com/) and create an application. Select google and github as sign in options:
    ![clerk1](./public/images/clerk1.png)
-3. Scroll down you should see:
+2. Copy paste the environment variables to .env file
    ![clerk2](./public/images/clerk2.png)
-4. copy paste the environment variables to .env file.
 
 #### Supabase
 
-1. Go to [Supabase](https://supabase.com/) and sign in or create an account.
-2. If this is your first time signing in, you will need to create a organization :
-   ![supabase1](./public/images/supabase1.png)
-3. Create a new project. **important:** store the password here somewhere as you will be using it in the 5th step.
-   ![supabase2](./public/images/supabase2.png)
-   Wait a few minutes for supabase to set up the project.
-4. Click "connect" on the right top corner and select ORMs:
-   ![supabase3](./public/images/supabase3.png)
-5. Copy paste the environment variables to .env file. Replace the placeholder for password to the password you stored in the 3th step.
+1. Go to [Supabase](https://supabase.com/). Create a new project. **Important:** store the password here somewhere as you will be using it in the 3th step. Wait a few minutes for supabase to set up the project.
+   ![supabase2](./public/images/supabase1.png)
+2. Click "connect" on the right top corner and select ORMs:
+   ![supabase3](./public/images/supabase2.png)
+3. Copy paste the environment variables to .env file. Replace the placeholder for password to the password you stored in the 1th step.
+
+4. In terminal run:
+
+```bash
+npx prisma db push
+```
 
 #### Sanity
 
-### Run the development server
+1. In terminal, run the following command. You can replace "zephyrlin.me" with another name.
+
+```bash
+npm create sanity@latest -- --template clean --create-project "zephyrlin.me" --dataset production  --output-path sanity
+```
+
+2. Then you will probably to be asked to sign in. After you sign in, follow the instructions:
+   ![sanity1](./public/images/sanity1.png)
+
+3. Go to /sanity/schemaTypes folder. Paste the following code to index.js:
+
+```
+import {projectsType} from './project'
+
+export const schemaTypes = [projectsType]
+```
+
+In the same folder, add a file named "project.js":
+
+```
+import {defineField, defineType} from 'sanity'
+
+export const projectsType = defineType({
+  name: 'project',
+  title: 'Project',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'image',
+      type: 'image',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'description',
+      type: 'text',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'link',
+      type: 'url',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'tags',
+      type: 'array',
+      of: [{type: 'string'}],
+      validation: (Rule) => Rule.required().min(1),
+    }),
+  ],
+})
+```
+
+4. Go to [sanity website](https://www.sanity.io/manage) to get project id and assign it to NEXT_PUBLIC_SANITY_ID in .env file.
+   ![sanity2](./public/images/sanity2.png)
+5. In terminal run the following:
+
+```bash
+cd sanity
+npm run dev
+```
+
+6. Navigate to [localhost:3333](http://localhost:3000), now you can add projects to the website.
+
+### Run the server
+
+🎉 Congratulations! Now we can finally run the website:
 
 ```bash
 npm run dev
