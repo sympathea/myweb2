@@ -54,7 +54,7 @@ export default async function Blog({ params }) {
 
         <hr className="mt-10 border-[0.5px] border-muted-foreground" />
 
-        <main className="mt-16 prose max-w-none prose-p:text-foreground prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground prose-h4:text-foreground prose-ul:text-foreground prose-ol:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-strong:font-bold prose-a:text-blue-400 prose-a:opacity-80 prose-code:text-green-200 prose-code:opacity-60 prose-p:tracking-tight">
+        <main className="mt-16 prose prose-invert max-w-none prose-p:text-foreground prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground prose-h4:text-foreground prose-ul:text-foreground prose-ol:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-strong:font-bold prose-a:text-blue-400 prose-a:opacity-80 prose-code:text-foreground prose-img:opacity-90 prose-p:tracking-tight">
           <MDXRemote source={content} />
         </main>
       </article>
