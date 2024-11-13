@@ -60,7 +60,7 @@ NEXT_PUBLIC_SANITY_ID=
 
 #### Supabase
 
-1. 前往 [Supabase官网](https://supabase.com/)，创建一个新项目。**重要提示**： 将密码存储在某个地方，因为在第 3 步中会用到。等待几分钟，让 Supabase 设置项目。
+1. 前往 [Supabase官网](https://supabase.com/)，创建一个新项目。**重要提示**：将密码存储在某个地方，因为在第 3 步中会用到。等待几分钟，让Supabase设置项目。
    ![supabase2](./public/images/supabase1.png)
 2. 点击右上角的 "connect"，选择 ORMs：
    ![supabase3](./public/images/supabase2.png)

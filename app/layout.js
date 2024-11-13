@@ -16,7 +16,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scrollbar-none">
+    <html
+      lang="en"
+      className="scrollbar-thin scrollbar-thumb-muted-foreground scrollbar-track-muted"
+    >
       <ClerkProviderWrapper>
         <body className={`${roboto_mono.className} bg-bg-image `}>
           <div className="flex flex-col items-center max-w-4xl px-4 pt-10 mx-auto lg:max-w-5xl sm:px-12 md:px-20 lg:px-12 xl:max-w-7xl min-h-svh ">
