@@ -19,7 +19,7 @@ export async function createMessage(formData) {
     data: {
       message: formData.get("message"),
       userId: user.id,
-      userName: user.username,
+      userName: user.username || user.firstName,
       userImg: user.imageUrl,
     },
   });
