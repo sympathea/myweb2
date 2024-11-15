@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 const localization = {
   signUp: {
@@ -16,5 +17,14 @@ const localization = {
 };
 
 export default function ClerkProviderWrapper({ children }) {
-  return <ClerkProvider localization={localization}>{children}</ClerkProvider>;
+  return (
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+      localization={localization}
+    >
+      {children}
+    </ClerkProvider>
+  );
 }
