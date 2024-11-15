@@ -151,3 +151,7 @@ npm run dev
 ```
 
 在浏览器中访问 [localhost:3000](http://localhost:3000)，查看网站效果。
+
+## 致谢
+
+网站参考了[cali.so](https://cali.so/)的设计。

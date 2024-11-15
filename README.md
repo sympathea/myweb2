@@ -153,3 +153,7 @@ npm run dev
 ```
 
 Navigate to [localhost:3000](http://localhost:3000) to see the website in action.
+
+## Acknowledgements
+
+The website is inspired by [cali.so](https://cali.so/).

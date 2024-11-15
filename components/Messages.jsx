@@ -25,7 +25,7 @@ export default async function Messages() {
 
             <div className="flex flex-col w-full ">
               <div className="flex items-center gap-2">
-                <p>{message.userFirstname}</p>
+                <p>{message.userName}</p>
                 <span className="text-xs text-muted-foreground">
                   {formatDistanceToNow(new Date(message.createdAt), {
                     addSuffix: true,
