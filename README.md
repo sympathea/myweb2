@@ -1,6 +1,14 @@
-# zephyrlin.me
+<h1 align="center">zephyrlin.me</h1>
 
-[简体中文](./README_CN.md)
+<p align="center"><a href="./README_CN.md">简体中文</a></p>
+
+<p align="center">A personal website for developers.</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-orange"/>
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen"/>
+  <img src="https://img.shields.io/badge/Powered%20by-React-blue"/>
+</p>
 
 ![home page picture](./public/images/home.png)
 

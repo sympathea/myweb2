@@ -1,4 +1,12 @@
-# zephyrlin.me
+<h1 align="center">zephyrlin.me</h1>
+
+<p align="center">一个适合开发者的个人网站</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-orange"/>
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen"/>
+  <img src="https://img.shields.io/badge/Powered%20by-React-blue"/>
+</p>
 
 ![home page picture](./public/images/home.png)
 
