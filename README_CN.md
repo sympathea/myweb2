@@ -162,4 +162,5 @@ npm run dev
 
 ## 致谢
 
-网站参考了[cali.so](https://cali.so/)的设计。
+- 网站参考了[cali.so](https://cali.so/)的设计。
+- 感谢**智炫**设计背景图和渐变。

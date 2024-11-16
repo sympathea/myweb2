@@ -2,7 +2,7 @@
 
 <p align="center"><a href="./README_CN.md">简体中文</a></p>
 
-<p align="center">A personal website for developers.</p>
+<p align="center">A personal website for developers</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-orange"/>
@@ -164,4 +164,5 @@ Navigate to [localhost:3000](http://localhost:3000) to see the website in action
 
 ## Acknowledgements
 
-The website is inspired by [cali.so](https://cali.so/).
+- The website is inspired by [cali.so](https://cali.so/).
+- Thanks Zhixuan for designing the background image and gradient.
