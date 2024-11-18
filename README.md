@@ -1,6 +1,6 @@
 <h1 align="center">zephyrlin.me</h1>
 
-<p align="center"><a href="./README_CN.md">简体中文</a></p>
+<p align="center"><a href="./public/docs/README_CN.md">简体中文</a></p>
 
 <p align="center">A personal website for developers</p>
 
@@ -165,4 +165,4 @@ Navigate to [localhost:3000](http://localhost:3000) to see the website in action
 ## Acknowledgements
 
 - The website is inspired by [cali.so](https://cali.so/).
-- Thanks Zhixuan for designing the background image and gradient.
+- Thanks **Zhixuan** for designing the background image and gradient.
