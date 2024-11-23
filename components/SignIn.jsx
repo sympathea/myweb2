@@ -17,7 +17,7 @@ export default function SignInAndOut({ pathname }) {
         </SignInButton>
       </SignedOut>
       <SignedIn>
-        <UserButton afterSignOutUrl={pathname} />
+        <UserButton />
       </SignedIn>
     </div>
   );
