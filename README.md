@@ -84,16 +84,17 @@ npx prisma db push
 
 #### Sanity
 
-1. In terminal, run the following command. You can replace "zephyrlin.me" with another name.
+1. Create an Sanity account and sign in.
+2. In terminal, run the following command. You can replace "zephyrlin.me" with another name.
 
 ```bash
 npm create sanity@latest -- --template clean --create-project "zephyrlin.me" --dataset production  --output-path sanity
 ```
 
-2. Then you will probably be asked to sign in. After you sign in, follow the instructions:
+3. Then you will probably be asked to sign in. After you sign in, follow the instructions:
    ![sanity1](./public/images/sanity1.png)
 
-3. Go to /sanity/schemaTypes folder. Paste the following code to index.js:
+4. Go to /sanity/schemaTypes folder. Paste the following code to index.js:
 
 ```javascript
 import { projectsType } from "./project";
@@ -141,9 +142,9 @@ export const projectsType = defineType({
 });
 ```
 
-4. Go to [sanity website](https://www.sanity.io/manage) to get project id and assign it to NEXT_PUBLIC_SANITY_ID in .env file.
+5. Go to [sanity website](https://www.sanity.io/manage) to get project id and assign it to NEXT_PUBLIC_SANITY_ID in .env file.
    ![sanity2](./public/images/sanity2.png)
-5. In terminal run the following:
+6. In terminal run the following:
 
 ```bash
 cd sanity

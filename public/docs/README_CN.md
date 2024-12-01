@@ -82,16 +82,17 @@ npx prisma db push
 
 #### Sanity
 
-1. 在终端中运行以下命令，可以将 "zephyrlin.me" 替换为其他名称。
+1. 创建一个 Sanity 账号，并且登录。
+2. 在终端中运行以下命令，可以将 "zephyrlin.me" 替换为其他名称。
 
 ```bash
 npm create sanity@latest -- --template clean --create-project "zephyrlin.me" --dataset production  --output-path sanity
 ```
 
-2. 系统可能会要求登录。登录后，按照指引操作：
+3. 系统可能会要求登录。登录后，按照指引操作：
    ![sanity1](../images/sanity1.png)
 
-3. 进入 /sanity/schemaTypes 文件夹，将以下代码粘贴到 index.js 文件中：
+4. 进入 /sanity/schemaTypes 文件夹，将以下代码粘贴到 index.js 文件中：
 
 ```javascript
 import { projectsType } from "./project";
@@ -139,16 +140,16 @@ export const projectsType = defineType({
 });
 ```
 
-4. 前往 [Sanity官网](https://www.sanity.io/manage) 获取project id，并将其赋值给 .env 文件中的 NEXT_PUBLIC_SANITY_ID。
+5. 前往 [Sanity官网](https://www.sanity.io/manage) 获取project id，并将其赋值给 .env 文件中的 NEXT_PUBLIC_SANITY_ID。
    ![sanity2](../images/sanity2.png)
-5. 在终端中运行以下命令：
+6. 在终端中运行以下命令：
 
 ```bash
 cd sanity
 npm run dev
 ```
 
-6. 打开 [localhost:3333](http://localhost:3333)，现在可以向网站添加项目了。
+7. 打开 [localhost:3333](http://localhost:3333)，现在可以向网站添加项目了。
 
 ### 启动服务器
 
