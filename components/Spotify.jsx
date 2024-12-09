@@ -24,15 +24,13 @@ export default async function Spotify() {
       {items.map((item) => {
         return (
           <li key={item.track.name} className="flex items-center gap-3 mb-4">
-            <div>
-              <Image
-                width={40}
-                height={40}
-                src={item.track.album.images[0]?.url}
-                alt="track picture"
-                className="object-cover rounded-lg"
-              />
-            </div>
+            <Image
+              width={40}
+              height={40}
+              src={item.track.album.images[0]?.url}
+              alt="track picture"
+              className="object-cover rounded-lg"
+            />
             <div className="text-sm">
               <p className="font-semibold ">{item.track.name}</p>
               <p className="text-muted-foreground">
