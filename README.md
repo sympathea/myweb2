@@ -19,6 +19,7 @@
 - Animation: **Framer Motion**
 - Database: **Supabase**
 - ORM: **Prisma**
+- Caching: **Redis**
 - CMS: **Sanity**
 - Authentication: **Clerk**
 - Deployment: **Vercel**
@@ -57,6 +58,16 @@ DIRECT_URL=
 
 # sanity
 NEXT_PUBLIC_SANITY_ID=
+
+# redis upstash
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+
+# spotify
+SPOTIFY_CLIENT_ID=
+SPOTIFY_CLIENT_SECRET=
+SPOTIFY_REDIRECT_URI=
+SPOTIFY_REFRESH_TOKEN=
 ```
 
 Now we need to set all the environment variables.
@@ -152,6 +163,10 @@ npm run dev
 ```
 
 7. Navigate to [localhost:3333](http://localhost:3333), now you can add projects to the website.
+
+#### Spotify
+
+This feature is newly added, I will write instructions to set it up soon. For now you can just comment out "Spotify" component in /page.js to prevent errors.
 
 ### Run the server
 

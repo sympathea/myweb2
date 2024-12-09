@@ -17,6 +17,7 @@
 - 动画：**Framer Motion**
 - 数据库：**Supabase**
 - ORM：**Prisma**
+- 缓存：**Redis**
 - 内容管理系统：**Sanity**
 - 认证：**Clerk**
 - 部署：**Vercel**
@@ -55,6 +56,16 @@ DIRECT_URL=
 
 # sanity
 NEXT_PUBLIC_SANITY_ID=
+
+# redis upstash
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+
+# spotify
+SPOTIFY_CLIENT_ID=
+SPOTIFY_CLIENT_SECRET=
+SPOTIFY_REDIRECT_URI=
+SPOTIFY_REFRESH_TOKEN=
 ```
 
 现在我们需要设置所有的环境变量。
@@ -150,6 +161,10 @@ npm run dev
 ```
 
 7. 打开 [localhost:3333](http://localhost:3333)，现在可以向网站添加项目了。
+
+#### Spotify
+
+这是新加的功能，我会尽快写出如何配置。现在你可以把 /app/page.js 里的 Spotify 组件注释掉，这样就能正常运行。
 
 ### 启动服务器
 
