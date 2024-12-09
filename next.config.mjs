@@ -4,6 +4,7 @@ const nextConfig = {
     remotePatterns: [
       { hostname: "img.clerk.com" },
       { hostname: "cdn.sanity.io" },
+      { hostname: "i.scdn.co" },
     ],
   },
   pageExtensions: ["js", "jsx", "mdx"],
