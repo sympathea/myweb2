@@ -4,10 +4,13 @@ import HtmlIcon from "@/public/icons/HtmlIcon";
 import JavaIcon from "@/public/icons/JavaIcon";
 import JSIcon from "@/public/icons/JSIcon";
 import MongoIcon from "@/public/icons/MongoIcon";
+import MybatisIcon from "@/public/icons/MybatisIcon";
 import MySQLIcon from "@/public/icons/MySQLIcon";
 import NextIcon from "@/public/icons/NextIcon";
 import NodeIcon from "@/public/icons/NodeIcon";
+import PrismaIcon from "@/public/icons/PrismaIcon";
 import ReactIcon from "@/public/icons/ReactIcon";
+import RedisIcon from "@/public/icons/RedisIcon";
 import SpringIcon from "@/public/icons/SpringIcon";
 import SupabaseIcon from "@/public/icons/SupabaseIcon";
 import TailwindIcon from "@/public/icons/TailwindIcon";
@@ -15,76 +18,31 @@ import ViteIcon from "@/public/icons/ViteIcon";
 
 export default function SkillsBar() {
   return (
-    <div className="flex flex-col items-start justify-center w-full gap-6 p-6 shadow-[0_0px_1.2px_rgb(140,140,140)] rounded-lg ">
-      {/* <IntroScrollMouse /> */}
-      <h2 className="text-xl text-green-200 opacity-60">Tech Stacks</h2>
-      <div>
-        <h3 className="mb-4 text-lg font-semibold">Frontend</h3>
-        <ul>
-          <li className="flex items-center gap-10 mb-2">
-            <div className="flex gap-2 ">
-              <HtmlIcon className="skillsIcon" />
-              <CSSIcon className="skillsIcon" />
-              <JSIcon className="skillsIcon" />
-            </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              HTML + CSS + JS
-            </div>
-          </li>
-          <li className="flex items-center gap-10 mb-2">
-            <div className="flex gap-2 ">
-              <ReactIcon className="skillsIcon" />
-              <ViteIcon className="skillsIcon" />
-              <TailwindIcon className="skillsIcon" />
-            </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              React + Vite + Tailwind
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 className="mb-4 text-lg font-semibold">Backend</h3>
-        <ul>
-          <li className="flex items-center gap-10 mb-2">
-            <div className="flex gap-2 ">
-              <JavaIcon className="skillsIcon" />
-              <SpringIcon className="skillsIcon" />
-              <MySQLIcon className="skillsIcon" />
-            </div>
-
-            <div className="text-sm font-semibold text-muted-foreground">
-              Java + Spring Boot + MySQL
-            </div>
-          </li>
-
-          <li className="flex items-center gap-10 mb-2">
-            <div className="flex gap-2 ">
-              <NodeIcon className="skillsIcon" />
-              <ExpressIcon className="skillsIcon" />
-              <MongoIcon className="skillsIcon" />
-            </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              Node.js + Express + MongoDB
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 className="mb-4 text-lg font-semibold">Fullstack</h3>
-        <ul>
-          <li className="flex items-center gap-20 mb-2">
-            <div className="flex gap-2 ">
-              <NextIcon className="skillsIcon" />
-              <SupabaseIcon className="skillsIcon" />
-            </div>
-            <div className="text-sm font-semibold text-muted-foreground">
-              Next.js + Supabase
-            </div>
-          </li>
-        </ul>
+    <div className="flex flex-col w-full gap-6 px-6 py-4 shadow-[0_0px_1.2px_rgb(140,140,140)] rounded-lg ">
+      <h2 className="text-lg">
+        ⚙️ <span className="text-green-200 opacity-60">Tech Stack</span>
+      </h2>
+      <div className="flex flex-col items-center justify-center gap-5">
+        <div className="flex justify-between w-full">
+          <HtmlIcon className="skillsIcon" />
+          <CSSIcon className="skillsIcon" />
+          <JSIcon className="skillsIcon" />
+          <ReactIcon className="skillsIcon" />
+          <ViteIcon className="skillsIcon" />
+          <TailwindIcon className="skillsIcon" />
+          <NodeIcon className="skillsIcon" />
+          <NextIcon className="skillsIcon" />
+        </div>
+        <div className="flex justify-between w-full">
+          <JavaIcon className="skillsIcon" />
+          <SpringIcon className="skillsIcon" />
+          <MySQLIcon className="skillsIcon" />
+          <PrismaIcon className="skillsIcon" />
+          <ExpressIcon className="skillsIcon" />
+          <MongoIcon className="skillsIcon" />
+          <SupabaseIcon className="skillsIcon" />
+          <RedisIcon className="skillsIcon" />
+        </div>
       </div>
     </div>
   );
