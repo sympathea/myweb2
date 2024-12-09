@@ -19,7 +19,7 @@
 - Animation: **Framer Motion**
 - Database: **Supabase**
 - ORM: **Prisma**
-- Caching: **Redis**
+- Session Caching: **Upstash Redis**
 - CMS: **Sanity**
 - Authentication: **Clerk**
 - Deployment: **Vercel**
@@ -59,7 +59,7 @@ DIRECT_URL=
 # sanity
 NEXT_PUBLIC_SANITY_ID=
 
-# redis upstash
+# upstash redis
 UPSTASH_REDIS_REST_URL=
 UPSTASH_REDIS_REST_TOKEN=
 

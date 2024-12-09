@@ -17,7 +17,7 @@
 - 动画：**Framer Motion**
 - 数据库：**Supabase**
 - ORM：**Prisma**
-- 缓存：**Redis**
+- 会话缓存：**Upstash Redis**
 - 内容管理系统：**Sanity**
 - 认证：**Clerk**
 - 部署：**Vercel**
@@ -57,7 +57,7 @@ DIRECT_URL=
 # sanity
 NEXT_PUBLIC_SANITY_ID=
 
-# redis upstash
+# upstash redis
 UPSTASH_REDIS_REST_URL=
 UPSTASH_REDIS_REST_TOKEN=
 
