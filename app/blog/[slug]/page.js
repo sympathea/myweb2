@@ -18,7 +18,7 @@ export default async function Blog({ params }) {
 
   return (
     <section className="flex pr-8 mx-auto">
-      <aside className="hidden relative pt-14 2xl:block">
+      <aside className="relative hidden pt-14 2xl:block">
         <Link
           href="/blog"
           className="sticky flex items-center gap-1 py-2 pl-4 pr-5 rounded-full top-10  text-foreground font-semibold bg-[#f2f2f21a] "
@@ -28,7 +28,7 @@ export default async function Blog({ params }) {
         </Link>
       </aside>
 
-      <article className="mx-auto mt-16 w-full max-w-3xl">
+      <article className="w-full max-w-3xl mx-auto mt-16">
         <header>
           {image && (
             <div className="relative w-full flex justify-center items-center mb-10 overflow-hidden rounded-lg aspect-[240/135]">
@@ -52,9 +52,7 @@ export default async function Blog({ params }) {
           <p className="">{summary}</p>
         </header>
 
-        <hr className="mt-10 border-[0.5px] border-muted-foreground" />
-
-        <main className="mt-16 max-w-none prose prose-invert prose-p:text-foreground prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground prose-h4:text-foreground prose-ul:text-foreground prose-ol:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-strong:font-bold prose-a:text-blue-400 prose-a:opacity-80 prose-code:text-foreground prose-img:opacity-90 prose-p:tracking-tight">
+        <main className="mt-16 prose max-w-none prose-invert prose-p:text-foreground prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground prose-h4:text-foreground prose-ul:text-foreground prose-ol:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-strong:font-bold prose-a:text-blue-400 prose-a:opacity-80 prose-code:text-foreground prose-img:opacity-90 prose-p:tracking-tight">
           <MDXRemote source={content} />
         </main>
       </article>
