@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Blogs({ blogs }) {
   return (
     <ul>
-      {blogs.map((blog, i) => (
+      {blogs.map((blog) => (
         <li key={blog.slug} className="mb-10">
           <Link href={`/blog/${blog.slug}`}>
             <div

@@ -7,7 +7,7 @@ export default function Projects({ projects }) {
     <section>
       <ul className="grid w-full grid-cols-1 gap-5 mx-auto sm:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
-          <div key={project._id}>
+          <li key={project._id}>
             <Link href={project.link} target="_blank">
               <div className="relative flex flex-col items-start justify-center gap-6 p-5 border-dashed border-[0.8px] border-transparent rounded-2xl hover:border-muted-foreground hover:bg-muted">
                 <div className="relative flex items-center justify-center w-12 h-12 shadow-[0_0px_3px_rgb(180,180,180)] rounded-full ">
@@ -33,7 +33,7 @@ export default function Projects({ projects }) {
                 </div>
               </div>
             </Link>
-          </div>
+          </li>
         ))}
       </ul>
     </section>
