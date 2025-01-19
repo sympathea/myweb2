@@ -21,25 +21,27 @@ export default async function Spotify() {
         </div>
       </div>
 
-      {items.map((item) => {
-        return (
-          <li key={item.track.name} className="flex items-center gap-3 mb-4">
-            <Image
-              width={40}
-              height={40}
-              src={item.track.album.images[0]?.url}
-              alt="track picture"
-              className="object-cover rounded-lg"
-            />
-            <div className="text-sm">
-              <p className="font-semibold ">{item.track.name}</p>
-              <p className="text-muted-foreground">
-                {item.track.artists.map((artist) => artist.name).join(", ")}
-              </p>
-            </div>
-          </li>
-        );
-      })}
+      <ul>
+        {items.map((item) => {
+          return (
+            <li key={item.track.name} className="flex items-center gap-3 mb-4">
+              <Image
+                width={40}
+                height={40}
+                src={item.track.album.images[0]?.url}
+                alt="track picture"
+                className="object-cover rounded-lg"
+              />
+              <div className="text-sm">
+                <p className="font-semibold ">{item.track.name}</p>
+                <p className="text-muted-foreground">
+                  {item.track.artists.map((artist) => artist.name).join(", ")}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

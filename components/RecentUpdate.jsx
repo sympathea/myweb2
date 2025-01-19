@@ -11,7 +11,7 @@ export default function RecentUpdate({ blogs }) {
       </div>
       <ul className="grid w-full grid-cols-1 gap-10">
         {blogs.map((blog) => (
-          <div key={blog.slug}>
+          <li key={blog.slug}>
             <Link href={`/blog/${blog.slug}`}>
               <div className="relative rounded-2xl hover:shadow-[0_0px_2px_rgb(140,140,140)] shadow-[0_0px_1.2px_rgb(140,140,140)] opacity-70 hover:opacity-90">
                 <div
@@ -22,11 +22,11 @@ export default function RecentUpdate({ blogs }) {
                     src={blog.image}
                     alt="Blog image"
                     fill
-                    className="object-cover rounded-2xl "
+                    className="object-contain rounded-2xl "
                   />
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg backdrop-blur-md ">
+                <div className="absolute bottom-0 left-0 right-0 p-4 rounded-lg backdrop-blur-3xl">
                   <h2 className="mb-2 font-bold">{blog.title}</h2>
                   <p className="mb-4 text-sm text-muted-foreground">
                     {blog.publishedAt ?? ""} | {blog.tag}
@@ -37,7 +37,7 @@ export default function RecentUpdate({ blogs }) {
                 </div>
               </div>
             </Link>
-          </div>
+          </li>
         ))}
       </ul>
     </div>
