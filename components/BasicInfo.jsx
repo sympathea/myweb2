@@ -15,10 +15,10 @@ export default function BasisInfo() {
           🌎 Current Location:{" "}
           <a
             className="font-bold"
-            href="https://en.wikipedia.org/wiki/Amherst,_Massachusetts"
+            href="https://en.wikipedia.org/wiki/Minneapolis"
             target="_blank"
           >
-            Amherst, MA, US
+            Minneapolis, MN, US
           </a>
           .
         </li>
@@ -26,10 +26,10 @@ export default function BasisInfo() {
           ✈️ Lived in{" "}
           <a
             className="font-bold"
-            href="https://en.wikipedia.org/wiki/Minneapolis"
+            href="https://en.wikipedia.org/wiki/Amherst,_Massachusetts"
             target="_blank"
           >
-            Minneapolis
+            Amherst
           </a>
           ,{" "}
           <a
