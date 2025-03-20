@@ -10,6 +10,12 @@
 
 ![home page picture](../images/home.png)
 
+## 🤩 更新！2.0版本正在开发中
+
+- 登录认证：Clerk -> Auth.js(Next-Auth)
+- project页面：Sanity -> 自己写的后台管理系统
+- 博客系统：本地储存 -> 自己写的后台管理系统
+
 ## ⚙️ 技术栈
 
 - 框架：**React + Next.js**

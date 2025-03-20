@@ -12,6 +12,12 @@
 
 ![home page picture](./public/images/home.png)
 
+## 🤩 Update! Version 2.0 is coming soon...
+
+- Authentication method: Clerk -> Auth.js(Next-Auth)
+- Project page: Sanity -> Admin dashboard
+- Blog System: Locally -> Admin dashboard
+
 ## ⚙️ Tech Stacks
 
 - Framework: **React + Next.js**
