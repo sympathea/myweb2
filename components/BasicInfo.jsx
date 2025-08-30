@@ -34,10 +34,10 @@ export default function BasisInfo() {
           ,{" "}
           <a
             className="font-bold"
-            href="https://en.wikipedia.org/wiki/Wuhan"
+            href="https://en.wikipedia.org/wiki/Shenzhen"
             target="_blank"
           >
-            Wuhan
+            Shenzhen
           </a>
           ,{" "}
           <a
@@ -47,7 +47,14 @@ export default function BasisInfo() {
           >
             Changsha
           </a>{" "}
-          in the past.
+          <a
+            className="font-bold"
+            href="https://en.wikipedia.org/wiki/Wuhan"
+            target="_blank"
+          >
+            Wuhan
+          </a>
+          , in the past.
         </li>
       </ul>
     </div>
